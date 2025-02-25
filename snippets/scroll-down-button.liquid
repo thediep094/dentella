@@ -1,0 +1,20 @@
+<div class="scroll-down-button">
+    <span>SCROLL DOWN</span>
+    {% render 'icon-scroll-down' %}
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var scrollDownButton = document.querySelector('.scroll-down-button');
+        var scrollDownButtonHeight = scrollDownButton.offsetHeight;
+        var scrollDownButtonTop = scrollDownButton.getBoundingClientRect().top;
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                scrollDownButton.classList.add('is-hidden');
+            } else {
+                scrollDownButton.classList.remove('is-hidden');
+            }
+        });
+    });
+</script>
