@@ -1,4 +1,7 @@
-<div class="block-collections color-{{ section.settings.color_scheme }}" id="block-collection--{{ section.id }}">
+<div
+  class="block-collections color-{{ section.settings.color_scheme }} container"
+  id="block-collection--{{ section.id }}"
+>
   <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
       {%- for block in section.blocks -%}
@@ -51,6 +54,7 @@
       {%- endfor -%}
     </div>
   </div>
+  <div class="swiper-wrapper"></div>
 </div>
 
 {% schema %}
@@ -135,6 +139,12 @@
           ],
           "default": "body",
           "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
+        },
+        {
+          "type": "number",
+          "id": "font_weight",
+          "label": "Font weight",
+          "default": 400
         }
       ]
     },
