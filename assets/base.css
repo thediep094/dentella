@@ -3788,10 +3788,20 @@ details-disclosure > details {
   transition: 0.3s;
   color: rgb(var(--color-button));
 }
+
+@media screen and (min-width: 980px) {
+  
 .scroll-down-button span {
   font-size: 20px;
   margin-bottom: 23px;
 }
+}
+
+.scroll-down-button span {
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
 .is-hidden {
   opacity: 0;
   pointer-events: none;
