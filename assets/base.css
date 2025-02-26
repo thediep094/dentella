@@ -3820,10 +3820,21 @@ details-disclosure > details {
   pointer-events: none;
 }
 
+.product-card-wrapper:hover .card__quick-add {
+   transform: translateY(0);
+  opacity:1 ;
+  pointer-events: normal;
+  visibility: visible;
+}
+
 .card__quick-add {
       position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
   z-index: 2;
+  transform: translateY(40px);
+  opacity:0 ;
+  pointer-events: none;
+  visibility: hidden;
 }
