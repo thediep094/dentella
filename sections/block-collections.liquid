@@ -77,6 +77,18 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+
+    const container = document.querySelector('#swiper-container--{{ section.id }}');
+  const wrapper = container.querySelector('.swiper-wrapper');
+
+  // Lấy chiều rộng của container và wrapper
+  const containerWidth = container.offsetWidth;
+  const wrapperWidth = wrapper.scrollWidth;
+
+  // Kiểm tra nếu nội dung vượt quá container hoặc màn hình nhỏ hơn 768px
+  const needsSwiper = wrapperWidth > containerWidth || window.innerWidth <= 768;
+    console.log(needsSwiper)
+
     new Swiper("#swiper-container--{{ section.id }}", {
      slidesPerView: "auto",
      spaceBetween: 0,
