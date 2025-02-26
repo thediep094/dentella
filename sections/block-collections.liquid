@@ -87,9 +87,9 @@
   // Kiểm tra nếu nội dung vượt quá container hoặc màn hình nhỏ hơn 768px
   const needsSwiper = wrapperWidth > containerWidth || window.innerWidth <= 768;
     if(!needsSwiper) {
-      container.querySelector('.block-collections__wrapper').classList.add('block-collections__wrapper--center')
+      container.classList.add('block-collections__wrapper--center')
     } else {
-      container.querySelector('.block-collections__wrapper').classList.remove('block-collections__wrapper--center')
+      container.classList.remove('block-collections__wrapper--center')
     }
 
     new Swiper("#swiper-container--{{ section.id }}", {
