@@ -3671,14 +3671,6 @@ details-disclosure > details {
     transform: translateY(0);
   }
 
-  .animate--hover-vertical-lift .button:not([disabled]):hover:after,
-  .animate--hover-vertical-lift .customer button:not([disabled]):hover:after,
-  .animate--hover-vertical-lift
-    .shopify-payment-button__button:not([disabled]):hover:after {
-    background-color: rgba(var(--color-button), var(--alpha-button-background));
-        color: rgb(var(--color-button-text));
-  }
-
   .animate--hover-vertical-lift
     .button:not([disabled]).button--secondary:hover:after {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
