@@ -114,7 +114,7 @@
         const blockId = item.id.replace('block-collections__list-item--', '');
         // Hide all items
         document.querySelectorAll('.block-collections__item').forEach(content => {
-             document.getElementById(`block-collections__item--${blockId}`).classList.remove('block-collections__item--active');
+            document.getElementById(`block-collections__item--${blockId}`).classList.remove('block-collections__item--active');
         });
         // Show the matching item
         document.getElementById(`block-collections__item--${blockId}`).classList.add('block-collections__item--active');
