@@ -5,6 +5,10 @@
   position: relative;
 }
 
+.image-overwrite--image {
+  max-width: 100%;
+}
+
 @media screen and (max-width: 768px) {
    .image-overwrite {
      margin-top: 0;
