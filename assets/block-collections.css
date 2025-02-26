@@ -9,10 +9,12 @@
   margin: 0 15px;
 }
 
-.block-collections__list {
-  display: flex;
-}
 
 .block-collections .swiper-wrapper {
   width: fit-content;
+}
+
+.block-collections__wrapper {
+   display: flex;
+  justify-content: center;
 }
