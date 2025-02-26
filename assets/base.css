@@ -2926,16 +2926,21 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item {
-  padding: 1.2rem 3rem;
+  padding: 1.2rem 1rem;
   text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
+}
+
+@media screen and (min-width: 990px) {
+  .header__menu-item {
+  padding: 1.2rem 1.5rem;
+  }
 }
 
 @media screen and (min-width: 1180px) {
   .header__menu-item {
   padding: 1.2rem 3.5rem;
   }
-
 }
 
 .header__menu-item:hover {
