@@ -103,14 +103,16 @@
           "type": "text",
           "settings": {
             "text": "Where art meets fashion",
-            "text_style": "caption-with-letter-spacing"
+            "text_style": "caption-with-letter-spacing",
+            "font_weight": 600
           }
         },
         "text_Atn6F8": {
           "type": "text",
           "settings": {
             "text": "Every design tells a story of creativity and elegance. crafted for the modern woman who values both style and meaning. From concept to creation, it's all about you.",
-            "text_style": "body"
+            "text_style": "body",
+            "font_weight": 400
           }
         },
         "buttons_7dkxit": {
