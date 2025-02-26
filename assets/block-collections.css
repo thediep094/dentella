@@ -6,3 +6,12 @@
   width: 200px;
   padding: 10px 10px;
 }
+
+.block-collections__list {
+  display: flex;
+  justify-content: center;
+}
+
+.block-collections .swiper-wrapper {
+  width: fit-content;
+}
