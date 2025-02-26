@@ -2937,7 +2937,7 @@ details[open] > .header__submenu {
   }
 }
 
-@media screen and (min-width: 1180px) {
+@media screen and (min-width: 1190px) {
   .header__menu-item {
   padding: 1.2rem 3.5rem;
   }
