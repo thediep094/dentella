@@ -136,14 +136,14 @@
         "collection_bDwAd8": {
           "type": "collection",
           "settings": {
-            "collection": "automated-collection",
+            "collection": "dentella",
             "text": "BABYDOLL"
           }
         },
         "collection_eHwQqD": {
           "type": "collection",
           "settings": {
-            "collection": "automated-collection",
+            "collection": "frontpage",
             "text": "CORSET"
           }
         },
