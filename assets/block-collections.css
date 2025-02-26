@@ -1,5 +1,6 @@
 .block-collections {
   overflow: hidden;
+  padding-bottom: 50px;
 }
 
 .block-collections__list-item {
