@@ -1301,7 +1301,7 @@ button.shopify-payment-button__button--unbranded {
   --border-opacity: calc(1 - var(--buttons-border-opacity));
   border-radius: var(--buttons-radius-outset);
   position: relative;
-  transition: .3s ease;
+  transition: .3s;
 }
 
 .button,
@@ -1325,7 +1325,6 @@ button.shopify-payment-button__button--unbranded {
   font-size: 1.5rem;
   text-decoration: none;
   color: rgb(var(--color-button-text));
-  transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
   background-color: rgba(var(--color-button), var(--alpha-button-background));
