@@ -1277,8 +1277,8 @@ deferred-media {
 }
 
 .button--secondary:hover {
-    background-color: rgba(var(--color-button), var(--alpha-button-background));
-        color: rgb(var(--color-button-text));
+    color: rgba(var(--color-button), var(--alpha-button-background));
+        background-color: rgb(var(--color-button-text));
 }
 
 .button--tertiary {
