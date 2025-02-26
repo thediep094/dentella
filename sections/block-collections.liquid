@@ -1,3 +1,4 @@
+{{ 'block-collections.css' | asset_url | stylesheet_tag }}
 <div
   class="block-collections color-{{ section.settings.color_scheme }} container"
   id="block-collection--{{ section.id }}"
@@ -17,6 +18,7 @@
             <div
               class="banner__text rte {{ block.settings.text_style }} {% if block.settings.text_style == 'caption-with-letter-spacing' %}caption-with-letter-spacing--large{% endif %}"
               {{ block.shopify_attributes }}
+              style="font-weight: {{ block.settings.font_weight }};"
             >
               <p>{{ block.settings.text }}</p>
             </div>
