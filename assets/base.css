@@ -81,7 +81,7 @@
 }
 
 body {
-  font-family: "Outfit Regular", sans-serif;
+  font-family: "Outfit Bold", sans-serif;
 }
 
 h1 {
@@ -95,6 +95,7 @@ h2 {
 h3 {
   font-family: "Outfit Medium", sans-serif;
 }
+
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);
