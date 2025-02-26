@@ -1,8 +1,10 @@
 {{ 'image-overwrite.css' | asset_url | stylesheet_tag }}
 
 <style>
+  @media screen and (min-width: 990px) {
   #image-overwrite--{{ section.id }} {
     margin-top: calc(-{{ section.settings.height_overwrite }}px);
+  }
   }
 </style>
 
