@@ -1,8 +1,26 @@
 {{ 'image-overwrite.css' | asset_url | stylesheet_tag }}
-
+<div class="image-overwrite color-{{ section.settings.color_scheme }}">
+  {{
+    section.settings.image
+    | image_url: width: 3840
+    | image_tag:
+      width: section.settings.image.width,
+      height: section.settings.image.height,
+      class: 'image-overwrite--image'
+  }}
+</div>
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Image Overwrite",
+  "settings": [ {
+    "type": "image_picker",
+    "id": "image",
+    "label": "t:sections.image-banner.settings.image.label"
+  },{
+    "type": "color_scheme",
+    "id": "color_scheme",
+    "label": "t:sections.all.colors.label",
+    "default": "scheme-1"
+  },]
+}
 {% endschema %}
