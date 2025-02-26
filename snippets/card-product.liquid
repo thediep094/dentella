@@ -124,7 +124,7 @@
                       id="{{ product_form_id }}-submit"
                       type="submit"
                       name="add"
-                      class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add animate-arrow{% endif %}"
+                      class="quick-add__submit button button--full-width button--primary{% if horizontal_quick_add %} card--horizontal__quick-add animate-arrow{% endif %}"
                       aria-haspopup="dialog"
                       aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                       data-product-url="{{ card_product.url }}"
@@ -179,7 +179,7 @@
                         id="{{ product_form_id }}-submit"
                         type="submit"
                         name="add"
-                        class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add{% endif %}"
+                        class="quick-add__submit button button--full-width button--primary{% if horizontal_quick_add %} card--horizontal__quick-add{% endif %}"
                         aria-haspopup="dialog"
                         aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                         aria-live="polite"
@@ -222,7 +222,7 @@
                       id="{{ product_form_id }}-submit"
                       type="submit"
                       name="add"
-                      class="quick-add__submit button button--full-width button--secondary"
+                      class="quick-add__submit button button--full-width button--primary"
                       aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                       data-sold-out-message="true"
                       disabled
@@ -253,7 +253,7 @@
                       id="{{ product_form_id }}-submit"
                       type="submit"
                       name="add"
-                      class="quick-add__submit button button--full-width button--secondary"
+                      class="quick-add__submit button button--full-width button--primary"
                       aria-haspopup="dialog"
                       aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                       data-product-url="{{ card_product.url }}"
@@ -373,7 +373,7 @@
         {%- endif -%}
         <a href="{{ card_product.url }}" class="card__content">
           <div class="card__information">
-            <h3
+            <div
               class="card__heading"
               {% if card_product.featured_media == null and settings.card_style == 'standard' %}
                 id="title-{{ section_id }}-{{ card_product.id }}"
@@ -387,7 +387,7 @@
               >
                 {{ card_product.title | escape }}
               </a>
-            </h3>
+            </div>
           </div>
           <div class="card__badge {{ settings.badge_position }}">
             {%- if card_product.available == false -%}
@@ -410,8 +410,8 @@
       </div>
       <div class="card__content">
         <div class="card__information">
-          <h3
-            class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
+          <div
+            class="card__heading card__heading-title{% if card_product.featured_media or settings.card_style == 'standard' %}{% endif %}"
             {% if card_product.featured_media or settings.card_style == 'card' %}
               id="title-{{ section_id }}-{{ card_product.id }}"
             {% endif %}
@@ -424,7 +424,7 @@
             >
               {{ card_product.title | escape }}
             </a>
-          </h3>
+          </div>
           <div class="card-information">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
@@ -611,11 +611,11 @@
       </div>
       <div class="card__content">
         <div class="card__information">
-          <h3 class="card__heading card__heading--placeholder{% if settings.card_style == 'standard' %} h5{% endif %}">
+          <div class="card__heading card__heading--placeholder{% if settings.card_style == 'standard' %} h5{% endif %}">
             <a role="link" aria-disabled="true" class="full-unstyled-link">
               {{ 'onboarding.product_title' | t }}
             </a>
-          </h3>
+          </div>
           <div class="card-information">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>

@@ -1,1 +1,14 @@
-<svg fill="none" class="icon icon-search" viewBox="0 0 18 19"><path fill="currentColor" fill-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 1 1 2.85 3.5a5.784 5.784 0 0 1 8.18 8.18m.26 1.12a6.78 6.78 0 1 1 .72-.7l5.4 5.4a.5.5 0 1 1-.71.7z" clip-rule="evenodd"/></svg>
+<svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="18.22" height="18.22" viewBox="0 0 18.22 18.22">
+  <g id="Group_20480" data-name="Group 20480" transform="translate(-1666.673 -38)">
+    <g id="Group_20477" data-name="Group 20477" transform="translate(1666.673 38)">
+      <g id="Group_20476" data-name="Group 20476">
+        <path id="Path_28703" data-name="Path 28703" d="M8.024,0a8.024,8.024,0,1,0,8.024,8.024A8.033,8.033,0,0,0,8.024,0Zm0,14.566a6.543,6.543,0,1,1,6.542-6.543A6.55,6.55,0,0,1,8.024,14.566Z"/>
+      </g>
+    </g>
+    <g id="Group_20479" data-name="Group 20479" transform="translate(1679.165 50.492)">
+      <g id="Group_20478" data-name="Group 20478">
+        <path id="Path_28704" data-name="Path 28704" d="M356.557,355.509l-4.246-4.246a.741.741,0,0,0-1.047,1.047l4.246,4.246a.741.741,0,0,0,1.047-1.047Z" transform="translate(-351.046 -351.046)"/>
+      </g>
+    </g>
+  </g>
+</svg>

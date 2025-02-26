@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "video_HKpqmU": {
       "type": "video",
@@ -32,21 +32,23 @@
           "type": "heading",
           "settings": {
             "heading": "\"Luxyry Nighwear, Redefined\"",
-            "heading_size": "hxl"
+            "heading_size": "hxxl"
           }
         },
         "text_YcC9gm": {
           "type": "text",
           "settings": {
-            "text": "Welcome to dentella",
-            "text_style": "caption-with-letter-spacing"
+            "text": "<strong>Welcome to dentella</strong>",
+            "text_style": "caption-with-letter-spacing",
+            "font_weight": 600
           }
         },
         "text_9YpMXb": {
           "type": "text",
           "settings": {
             "text": "Dentella redefines nightwear with a perfect balance of artistry and comfort. Every piece reflects our commitment to time less beauty and effortless elegance.",
-            "text_style": "body"
+            "text_style": "body",
+            "font_weight": 400
           }
         },
         "button": {
@@ -78,7 +80,9 @@
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
-        "show_text_below": false
+        "show_text_below": false,
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "image_overwrite_PhGGyV": {
@@ -96,23 +100,21 @@
           "type": "heading",
           "settings": {
             "heading": "DESIGNED FOR YOU",
-            "heading_size": "h1"
+            "heading_size": "hxl"
           }
         },
         "text_FH3BEd": {
           "type": "text",
           "settings": {
-            "text": "Where art meets fashion",
-            "text_style": "caption-with-letter-spacing",
-            "font_weight": 600
+            "text": "<strong>Where art meets fashion</strong>",
+            "text_style": "caption-with-letter-spacing"
           }
         },
         "text_Atn6F8": {
           "type": "text",
           "settings": {
             "text": "Every design tells a story of creativity and elegance. crafted for the modern woman who values both style and meaning. From concept to creation, it's all about you.",
-            "text_style": "body",
-            "font_weight": 400
+            "text_style": "body"
           }
         },
         "buttons_7dkxit": {

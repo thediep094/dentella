@@ -42,7 +42,7 @@
             <div
               class="banner__text rte {{ block.settings.text_style }} {% if block.settings.text_style == 'caption-with-letter-spacing' %}caption-with-letter-spacing--large{% endif %}"
               {{ block.shopify_attributes }}
-              style="font-weight: {{ block.settings.font_weight }};"
+              
             >
               <p>{{ block.settings.text }}</p>
             </div>
@@ -99,6 +99,7 @@
   </div>
 
   <div class="block-collections__items">
+  
     {% assign skip_card_product_styles = false %}
     {% assign checkFirst = 0 %}
     {% for block in section.blocks %}
@@ -108,6 +109,12 @@
       {%- endif -%}
       {% case block.type %}
         {% when 'collection' %}
+          <h2
+          class="banner__heading inline-richtext block-collections__title hxl {% if checkFirst == 0 %}block-collections__title--active{% endif %}"
+          id="block-collections__title--{{ block.id }}"
+        >
+        {{ block.settings.collection.title }}
+        </h2>
           <div
             class="block-collections__item   {% if checkFirst == 0 %}block-collections__item--active{% endif %}"
             id="block-collections__item--{{ block.id }}"
@@ -151,6 +158,12 @@
           });
           // Show the matching item
           document.getElementById(`block-collections__item--${blockId}`).classList.add('block-collections__item--active');
+
+          document.querySelectorAll('.block-collections__title').forEach(content => {
+           content.classList.remove('block-collections__title--active');
+          });
+          // Show the matching item
+          document.getElementById(`block-collections__title--${blockId}`).classList.add('block-collections__title--active');
       });
     });
     
@@ -380,12 +393,7 @@
           "default": "body",
           "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
         },
-        {
-          "type": "number",
-          "id": "font_weight",
-          "label": "Font weight",
-          "default": 400
-        }
+       
       ]
     },
     {
