@@ -85,7 +85,7 @@
       {% case block.type %}
         {% when 'collection' %}
           <div
-            class="block-collections__item {% if forloop.first %}block-collections__item--active{% endif %}"
+            class="block-collections__item   {% if forloop.first %}block-collections__item--active{% endif %}"
             id="block-collections__item--{{ block.id }}"
           >
             {% for product in block.settings.collection.products limit: 4 %}
