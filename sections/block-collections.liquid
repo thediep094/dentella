@@ -61,7 +61,7 @@
       {% for block in section.blocks %}
         {% case block.type %}
           {% when 'collection' %}
-            <a class="swiper-slide" href="{{ block.settings.collection.url }}">{{ block.settings.text }}</a>
+            <div class="swiper-slide" href="{{ block.settings.collection.url }}">{{ block.settings.text }}</div>
         {% endcase %}
       {% endfor %}
     </div>
