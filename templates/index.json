@@ -125,13 +125,21 @@
             "button_link_2": "",
             "button_style_secondary_2": false
           }
+        },
+        "collection_EqJ4RN": {
+          "type": "collection",
+          "settings": {
+            "collection": "automated-collection",
+            "text": "Collection"
+          }
         }
       },
       "block_order": [
         "heading_UeHjg7",
         "text_FH3BEd",
         "text_Atn6F8",
-        "buttons_7dkxit"
+        "buttons_7dkxit",
+        "collection_EqJ4RN"
       ],
       "settings": {
         "color_scheme": ""
