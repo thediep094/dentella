@@ -81,6 +81,12 @@
         "show_text_below": false
       }
     },
+    "image_overwrite_PhGGyV": {
+      "type": "image-overwrite",
+      "settings": {
+        "color_scheme": ""
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -113,6 +119,7 @@
   "order": [
     "video_HKpqmU",
     "image_banner",
+    "image_overwrite_PhGGyV",
     "featured_collection"
   ]
 }
