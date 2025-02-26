@@ -24,6 +24,11 @@
   column-gap: 20px;
 }
 
+.block-collections__items {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
 
 @media screen and (min-width: 1000px) {
   .block-collections__item {
