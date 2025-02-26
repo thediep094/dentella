@@ -19,6 +19,7 @@
 
 .block-collections__item {
   display: none;
+  width: 100%;
 }
 
 .block-collections__item--active {
