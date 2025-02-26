@@ -40,10 +40,6 @@
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="video-section isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
-        {% if  template == 'index' %}
-      {% render 'scroll-down-button' %}
-    {%endif%}
-
     <div
       {% if section.settings.full_width %}
         class="page-width"
@@ -71,18 +67,20 @@
       >
         {%- if poster != null -%}
           {{
-            poster 
+            poster
             | image_url: width: 3840
             | image_tag: sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
           }}
         {%- else -%}
           {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
         {%- endif -%}
-        {% comment %} <span class="deferred-media__poster-button motion-reduce">
-          <span class="svg-wrapper">
-            {{- 'icon-play.svg' | inline_asset_content -}}
+        {% comment %}
+          <span class="deferred-media__poster-button motion-reduce">
+            <span class="svg-wrapper">
+              {{- 'icon-play.svg' | inline_asset_content -}}
+            </span>
           </span>
-        </span> {% endcomment %}
+        {% endcomment %}
       </button>
       <template>
         {%- if section.settings.video == null and section.settings.video_url != null -%}
