@@ -56,19 +56,21 @@
       {%- endfor -%}
     </div>
   </div>
-  <div class="block-collections__list" id="swiper-container--{{ section.id }}">
-    <div class="swiper-wrapper">
-      {% for block in section.blocks %}
-        {% case block.type %}
-          {% when 'collection' %}
-            <div
-              class="swiper-slide block-collections__list-item button button--secondary"
-              href="{{ block.settings.collection.url }}"
-            >
-              {{ block.settings.text }}
-            </div>
-        {% endcase %}
-      {% endfor %}
+  <div class="block-collections__wrapper">
+    <div class="block-collections__list" id="swiper-container--{{ section.id }}">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'collection' %}
+              <div
+                class="swiper-slide block-collections__list-item button button--secondary"
+                href="{{ block.settings.collection.url }}"
+              >
+                {{ block.settings.text }}
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
