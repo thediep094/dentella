@@ -18,6 +18,10 @@
 }
 
 .block-collections__item {
+  display: none;
+}
+
+.block-collections__item--active {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   row-gap: 20px;
