@@ -84,6 +84,7 @@
     "image_overwrite_PhGGyV": {
       "type": "image-overwrite",
       "settings": {
+        "image": "shopify://shop_images/0D0A6678.png",
         "color_scheme": ""
       }
     },
