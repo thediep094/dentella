@@ -84,13 +84,12 @@
 
     // Hàm kiểm tra và khởi tạo/hủy Swiper
     function checkSwiper() {
-      console.log("call")
       // Lấy chiều rộng của container và wrapper
       const containerWidth = container.offsetWidth;
       const wrapperWidth = wrapper.scrollWidth;
 
       // Kiểm tra nếu nội dung vượt quá container hoặc màn hình nhỏ hơn 768px
-      const needsSwiper = wrapperWidth > containerWidth || window.innerWidth <= 768;
+      const needsSwiper = wrapperWidth > containerWidth || window.innerWidth <= 990;
 
       // Thêm hoặc xóa class để căn giữa khi không cần Swiper
       if (!needsSwiper) {
@@ -101,7 +100,6 @@
           swiperInstance = null;
         }
       } else {
-        console.log("abc")
         swiperWrapper.classList.remove('block-collections__wrapper--center');
         // Chỉ khởi tạo Swiper nếu chưa có
         if (!swiperInstance) {
