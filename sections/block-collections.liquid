@@ -76,7 +76,7 @@
 
   <div class="block-collections__items">
     {% assign skip_card_product_styles = false %}
-
+    {% assign checkFirst = 0 %}
     {% for block in section.blocks %}
       {% assign lazy_load = false %}
       {%- if forloop.index > 2 -%}
@@ -85,7 +85,7 @@
       {% case block.type %}
         {% when 'collection' %}
           <div
-            class="block-collections__item   {% if forloop.index == 1 %}block-collections__item--active{% endif %}"
+            class="block-collections__item   {% if checkFirst == 0 %}block-collections__item--active{% endif %}"
             id="block-collections__item--{{ block.id }}"
             data="{{ forloop.index }}"
           >
@@ -103,6 +103,7 @@
                 section_id: section.id
               %}
               {%- assign skip_card_product_styles = true -%}
+              {% assign checkFirst = checkFrist | plus: 1 %}
             {% endfor %}
           </div>
       {% endcase %}
