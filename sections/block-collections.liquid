@@ -79,6 +79,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     const container = document.querySelector('#swiper-container--{{ section.id }}');
     const wrapper = container.querySelector('.swiper-wrapper');
+    const swiperWrapper = document.querySelector('#block-collection--{{ section.id }} .block-collections__wrapper')
     let swiperInstance = null; // Lưu instance của Swiper
 
     // Hàm kiểm tra và khởi tạo/hủy Swiper
@@ -92,14 +93,14 @@
 
       // Thêm hoặc xóa class để căn giữa khi không cần Swiper
       if (!needsSwiper) {
-        container.classList.add('block-collections__wrapper--center');
+        swiperWrapper.classList.add('block-collections__wrapper--center');
         // Hủy Swiper nếu đã tồn tại
         if (swiperInstance) {
           swiperInstance.destroy();
           swiperInstance = null;
         }
       } else {
-        container.classList.remove('block-collections__wrapper--center');
+        swiperWrapper.classList.remove('block-collections__wrapper--center');
         // Chỉ khởi tạo Swiper nếu chưa có
         if (!swiperInstance) {
           swiperInstance = new Swiper('#swiper-container--{{ section.id }}', {
