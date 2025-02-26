@@ -469,10 +469,6 @@
   margin-top: 0.5rem;
 }
 
-.card-information {
-  width: 100%;
-}
-
 .card-information > * {
   line-height: calc(1 + 0.4 / var(--font-body-scale));
   color: rgb(var(--color-foreground));
