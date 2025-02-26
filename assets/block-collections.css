@@ -9,3 +9,9 @@
   margin: 0 15px;
 }
 
+
+
+.block-collections__wrapper--center {
+  display: flex;
+  justify-content: center;
+}
