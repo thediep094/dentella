@@ -108,6 +108,19 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+
+    document.querySelectorAll('.block-collections__list-item').forEach(item => {
+    item.addEventListener('click', () => {
+        const blockId = item.id.replace('block-collections__list-item--', '');
+        // Hide all items
+        document.querySelectorAll('.block-collections__item').forEach(content => {
+            content.style.display = 'none';
+        });
+        // Show the matching item
+        document.getElementById(`block-collections__item--${blockId}`).style.display = 'block';
+    });
+});
+    
     const container = document.querySelector('#swiper-container--{{ section.id }}');
     const wrapper = container.querySelector('.swiper-wrapper');
     const swiperWrapper = document.querySelector('#block-collection--{{ section.id }} .block-collections__wrapper')
