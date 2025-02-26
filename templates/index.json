@@ -120,7 +120,7 @@
           "settings": {
             "button_label_1": "Discover More",
             "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": false,
+            "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -136,42 +136,42 @@
         "collection_bDwAd8": {
           "type": "collection",
           "settings": {
-            "collection": "dentella",
+            "collection": "automated-collection",
             "text": "BABYDOLL"
           }
         },
         "collection_eHwQqD": {
           "type": "collection",
           "settings": {
-            "collection": "dentella",
+            "collection": "automated-collection",
             "text": "CORSET"
           }
         },
         "collection_UDPTx9": {
           "type": "collection",
           "settings": {
-            "collection": "dentella",
+            "collection": "automated-collection",
             "text": "PYJAMA"
           }
         },
         "collection_86aie3": {
           "type": "collection",
           "settings": {
-            "collection": "dentella",
+            "collection": "automated-collection",
             "text": "LINGERIE"
           }
         },
         "collection_zkwqtM": {
           "type": "collection",
           "settings": {
-            "collection": "dentella",
+            "collection": "automated-collection",
             "text": "NIGHT DRESS"
           }
         },
         "collection_fyj3BD": {
           "type": "collection",
           "settings": {
-            "collection": "dentella",
+            "collection": "automated-collection",
             "text": "BRIDE STYLE"
           }
         }
@@ -190,7 +190,7 @@
         "collection_fyj3BD"
       ],
       "settings": {
-        "color_scheme": ""
+        "color_scheme": "scheme-1"
       }
     }
   },
