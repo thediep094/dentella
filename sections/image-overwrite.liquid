@@ -1,5 +1,12 @@
 {{ 'image-overwrite.css' | asset_url | stylesheet_tag }}
-<div class="image-overwrite color-{{ section.settings.color_scheme }}">
+
+<style>
+  #image-overwrite--{{ section.id }} {
+    margin-top: calc(-{{ section.settings.height_overwrite }}px);
+  }
+</style>
+
+<div class="image-overwrite color-{{ section.settings.color_scheme }}" id="image-overwrite--{{ section.id }}">
   {% if section.settings.image != blank %}
     {{
       section.settings.image
