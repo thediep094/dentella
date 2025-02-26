@@ -424,6 +424,10 @@
 }
 
 .card--standard > .card__content .card__information {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
   padding-left: 0;
   padding-right: 0;
 }
