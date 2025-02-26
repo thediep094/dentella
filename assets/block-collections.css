@@ -16,3 +16,22 @@
   display: flex;
   justify-content: center;
 }
+
+.block-collections__item {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media screen and (min-width: 1200px) {
+  .block-collections__item {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+}
+
+@media screen and (min-width: 768px) {
+  .block-collections__item {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+}
