@@ -1,7 +1,16 @@
+<div class="block-collections" id="block-collection--{{ section.id }}"></div>
+
 {% schema %}
 {
   "name": "Block Collections",
-  "settings": [],
+  "settings": [
+     {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    }
+  ],
   "blocks": [
     {
       "type": "heading",
