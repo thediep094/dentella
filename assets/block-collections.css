@@ -1,3 +1,8 @@
 .block-collections {
   overflow: hidden;
 }
+
+.block-collections__list-item {
+  width: 200px;
+  padding: 10px 10px;
+}
