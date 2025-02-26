@@ -85,7 +85,7 @@
       {% case block.type %}
         {% when 'collection' %}
           <div class="block-collections__item" id="block-collections__item--{{ block.id }}">
-            {% for product in block.settings.collection.products %}
+            {% for product in block.settings.collection.products limit: 4 %}
               {% render 'card-product',
                 card_product: product,
                 media_aspect_ratio: section.settings.image_ratio,
