@@ -40,6 +40,10 @@
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="video-section isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
+        {% if  template == 'index' %}
+      {% render 'scroll-down-button' %}
+    {%endif%}
+
     <div
       {% if section.settings.full_width %}
         class="page-width"
