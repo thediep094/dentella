@@ -35,6 +35,13 @@
             "heading_size": "hxl"
           }
         },
+        "text_YcC9gm": {
+          "type": "text",
+          "settings": {
+            "text": "Welcome to dentella",
+            "text_style": "caption-with-letter-spacing"
+          }
+        },
         "text_9YpMXb": {
           "type": "text",
           "settings": {
@@ -56,6 +63,7 @@
       },
       "block_order": [
         "heading",
+        "text_YcC9gm",
         "text_9YpMXb",
         "button"
       ],
