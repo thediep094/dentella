@@ -1,19 +1,36 @@
 <div class="scroll-down-button">
-    <span>SCROLL DOWN</span>
-    {% render 'icon-scroll-down' %}
+  <span>SCROLL DOWN</span>
+  {% render 'icon-scroll-down' %}
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var scrollDownButton = document.querySelector('.scroll-down-button');
-        var scrollDownButtonHeight = scrollDownButton.offsetHeight;
-        var scrollDownButtonTop = scrollDownButton.getBoundingClientRect().top;
+    document.addEventListener("DOMContentLoaded", function () {
+        var scrollDownButton = document.querySelector(".scroll-down-button");
+        var firstSection = document.querySelector("section"); // Adjust selector if needed
 
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 100) {
-                scrollDownButton.classList.add('is-hidden');
+        function updateButtonPosition() {
+            if (!firstSection || !scrollDownButton) return;
+
+            var firstSectionHeight = firstSection.offsetHeight;
+            var viewportHeight = window.innerHeight;
+
+            if (firstSectionHeight > viewportHeight) {
+                scrollDownButton.style.bottom = "1.6rem";
             } else {
-                scrollDownButton.classList.remove('is-hidden');
+                scrollDownButton.style.bottom = `${firstSectionHeight + 16}px`; // 1.6rem = 16px
+            }
+        }
+
+        // Run on load and on resize
+        updateButtonPosition();
+        window.addEventListener("resize", updateButtonPosition);
+
+        // Hide on scroll
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 100) {
+                scrollDownButton.classList.add("is-hidden");
+            } else {
+                scrollDownButton.classList.remove("is-hidden");
             }
         });
     });
