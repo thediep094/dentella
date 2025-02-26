@@ -3799,7 +3799,7 @@ details-disclosure > details {
   transform: translateX(-50%);
   z-index: 1;
   transition: 0.3s;
-  color: rgb(var(--color-button));
+  color: rgb(var(--color-button-text));
 }
 
 @media screen and (min-width: 980px) {
