@@ -1281,6 +1281,11 @@ deferred-media {
     background-color: rgb(var(--color-button-text));
 }
 
+.button--primary:hover {
+   color: rgba(var(--color-button), var(--alpha-button-background));
+    background-color: rgb(var(--color-button-text));
+}
+
 .button--tertiary {
   --alpha-button-background: 0;
   --alpha-button-border: 0.2;
