@@ -57,12 +57,14 @@
     </div>
   </div>
   <div class="block-collections__list  swiper-container">
-    <swiper-container slides-per-view="3" speed="500" loop="true" css-mode="true">
-      <swiper-slide>Slide 1</swiper-slide>
-      <swiper-slide>Slide 2</swiper-slide>
-      <swiper-slide>Slide 3</swiper-slide>
-      ...
-    </swiper-container>
+    <div class="swiper-wrapper">
+      {% for block in section.block %}
+        {% case block.type %}
+          {% when 'collection' %}
+            <a class="swiper-slide" href="{{ block.settings.collection.url }}">{{ block.settings.text }}</a>
+        {% endcase %}
+      {% endfor %}
+    </div>
   </div>
 </div>
 
