@@ -95,11 +95,6 @@ h2 {
 h3 {
   font-family: "Outfit Medium", sans-serif;
 }
-
-p {
-  font-family: "Outfit Light", sans-serif;
-}
-
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);
