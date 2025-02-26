@@ -112,12 +112,24 @@
             "text": "Every design tells a story of creativity and elegance. crafted for the modern woman who values both style and meaning. From concept to creation, it's all about you.",
             "text_style": "body"
           }
+        },
+        "buttons_7dkxit": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Discover More",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
         }
       },
       "block_order": [
         "heading_UeHjg7",
         "text_FH3BEd",
-        "text_Atn6F8"
+        "text_Atn6F8",
+        "buttons_7dkxit"
       ],
       "settings": {
         "color_scheme": ""
