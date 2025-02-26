@@ -80,6 +80,14 @@
     new Swiper("#swiper-container--{{ section.id }}", {
      slidesPerView: "auto",
      spaceBetween: 0,
+      watchOverflow: true,   // Tắt Swiper nếu nội dung không cần trượt
+      centeredSlides: true,  // Căn giữa slides trên desktop
+      breakpoints: {
+    // Khi màn hình nhỏ hơn 768px (mobile)
+    768: {
+      centeredSlides: false, // Không căn giữa nữa, hiển thị slide đầu tiên
+    }
+  }
    })
   })
 </script>
