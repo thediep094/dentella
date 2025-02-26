@@ -3823,7 +3823,7 @@ details-disclosure > details {
 .product-card-wrapper:hover .card__quick-add {
    transform: translateY(0);
   opacity:1 ;
-  pointer-events: normal;
+  pointer-events: all;
   visibility: visible;
 }
 
