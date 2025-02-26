@@ -85,7 +85,8 @@
       "type": "image-overwrite",
       "settings": {
         "image": "shopify://shop_images/0D0A6678.png",
-        "color_scheme": ""
+        "color_scheme": "",
+        "height_overwrite": 100
       }
     },
     "featured_collection": {
