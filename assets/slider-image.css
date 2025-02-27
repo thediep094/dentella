@@ -5,4 +5,11 @@
 
 .slider-image .slider-image__wrapper {
   overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content
+}
+
+.slider-image .swiper-button-prev {
+  display: block !important;
 }
