@@ -295,13 +295,13 @@
           "settings": {
             "heading": "Shades of Blue",
             "heading_size": "h1",
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "",
             "text_style": "body",
             "font_weight": 400,
             "button_label_1": "View Collection",
             "button_link_1": "shopify://collections/dentella",
             "button_style_secondary_1": false,
-            "desktop_content_position": "top-center",
+            "desktop_content_position": "middle-left",
             "mobile_content_alignment": "center"
           }
         },
@@ -310,13 +310,13 @@
           "settings": {
             "heading": "Shades of Red",
             "heading_size": "h1",
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "",
             "text_style": "body",
             "font_weight": 400,
             "button_label_1": "View Collection",
             "button_link_1": "shopify://collections/dentella",
             "button_style_secondary_1": false,
-            "desktop_content_position": "middle-center",
+            "desktop_content_position": "middle-left",
             "mobile_content_alignment": "center"
           }
         }
