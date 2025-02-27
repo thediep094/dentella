@@ -22,13 +22,14 @@
   position: relative;
   color: #707070;
    width: 40px;
+    right: 10px;
 }
 
 .slider-image .swiper-button-next {
   display: flex !important;
   position: relative;
   color: #707070;
-  width: 40px;
+  left: 10px;
 }
 
 @media screen and (min-width: 786px) {
