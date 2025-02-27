@@ -68,8 +68,8 @@
         {%- endfor -%}
       </div>
     </div>
+    <div class="swiper-button-prev"></div>
     <div class="slider-image__wrapper" id="slider-image--{{ section.id }}">
-      <div class="swiper-button-prev"></div>
       <div class="swiper-wrapper">
         {% for block in section.blocks %}
           {% case block.type %}
@@ -83,8 +83,8 @@
           {% endcase %}
         {% endfor %}
       </div>
-      <div class="swiper-button-next"></div>
     </div>
+    <div class="swiper-button-next"></div>
   </div>
 </div>
 
