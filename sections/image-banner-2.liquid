@@ -104,7 +104,7 @@
         {% case block.type %}
           {% when 'heading1' %}
             <div class="banner__media-wrapper">
-              <div class="banner__media-heading page-width">
+              <div class="banner__media-heading banner__media-heading-desktop--{{ block.settings.desktop_content_position }} banner__media-heading-mobile--{{ block.settings.mobile_content_alignment }} page-width">
                 <h2
                   class="banner__heading inline-richtext {{ block.settings.heading_size }}"
                   {{ block.shopify_attributes }}
