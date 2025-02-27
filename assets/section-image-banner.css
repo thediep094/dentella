@@ -429,9 +429,7 @@
 }
 
 
-.banner__buttons--less-margin {
-  margin-top: 1rem;
-}
+
 .banner__box > * + * {
   margin-top: 1rem;
 }
@@ -496,6 +494,14 @@
 
 .banner__box > * + .banner__buttons {
   margin-top: 4.5rem;
+}
+
+.banner__box > * + .banner__buttons.banner__buttons--less-margin {
+  margin-top: 1rem;
+}
+
+.banner__buttons--less-margin {
+  margin-top: 1rem;
 }
 
 @media screen and (max-width: 749px) {
