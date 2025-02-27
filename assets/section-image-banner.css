@@ -549,17 +549,17 @@
     text-align: right;
   }
   .banner__media-heading-desktop--bottom-left {
-    bottom: 0;
+    bottom: 3.4rem;
     text-align: left;
   }
 
   .banner__media-heading-desktop--bottom-center {
-    bottom: 0;
+    bottom: 3.4rem;
     text-align: center;
   }
 
   .banner__media-heading-desktop--bottom-right {
-    bottom: 0;
+    bottom: 3.4rem;
     text-align: right;
   }
 }
