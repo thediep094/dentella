@@ -3,6 +3,12 @@
   height: auto;
 }
 
+.slider-image__content {
+   position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
 .slider-image .slider-image__wrapper {
   overflow: hidden;
   position: relative;
