@@ -75,7 +75,7 @@
                 class="swiper-slide slider-image__item"
                 id="slider-image__item--{{ block.id }}"
               >
-                {{ block.settings.image | image_url: width: 300 }}
+                {{ block.settings.image | image_url: width: 300 | image_tag: class: 'slider-image__item-img' }}
               </div>
           {% endcase %}
         {% endfor %}
