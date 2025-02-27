@@ -415,8 +415,12 @@
 }
 
 @media screen and (min-width: 750px) {
-  .banner__box > * + .banner__text {
+  .banner__box:not(banner__text--less-margin) > * + .banner__text {
     margin-top: 4.5rem;
+  }
+
+  .banner__box:has(banner__text--less-margin) > * + .banner__text {
+    margin-top: 1rem;
   }
 }
 
