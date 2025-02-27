@@ -68,23 +68,25 @@
         {%- endfor -%}
       </div>
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="slider-image__wrapper" id="slider-image--{{ section.id }}">
-      <div class="swiper-wrapper">
-        {% for block in section.blocks %}
-          {% case block.type %}
-            {% when 'image' %}
-              <div
-                class="swiper-slide slider-image__item"
-                id="slider-image__item--{{ block.id }}"
-              >
-                {{ block.settings.image | image_url: width: 300 | image_tag: class: 'slider-image__item-img' }}
-              </div>
-          {% endcase %}
-        {% endfor %}
+    <div class="slider-image__content">
+      <div class="swiper-button-prev"></div>
+      <div class="slider-image__wrapper" id="slider-image--{{ section.id }}">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'image' %}
+                <div
+                  class="swiper-slide slider-image__item"
+                  id="slider-image__item--{{ block.id }}"
+                >
+                  {{ block.settings.image | image_url: width: 300 | image_tag: class: 'slider-image__item-img' }}
+                </div>
+            {% endcase %}
+          {% endfor %}
+        </div>
       </div>
+      <div class="swiper-button-next"></div>
     </div>
-    <div class="swiper-button-next"></div>
   </div>
 </div>
 
