@@ -341,8 +341,8 @@
     "featured_collection_btgQ4c": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
-        "heading_size": "h1",
+        "title": "Bridai collection",
+        "heading_size": "h0",
         "description": "",
         "show_description": false,
         "description_style": "body",
