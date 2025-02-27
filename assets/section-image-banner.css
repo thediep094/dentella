@@ -520,7 +520,7 @@
   }
 
    .banner__media-heading-mobile--center {
-    top: 50px;
+    top: 50%;
     transform: translateY(-50%);
     text-align: center;
   }
