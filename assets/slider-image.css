@@ -18,11 +18,22 @@
 }
 
 .slider-image .swiper-button-prev {
-  display: block !important;
+  display: flex !important;
   position: relative;
 }
 
 .slider-image .swiper-button-next {
-  display: block !important;
+  display: flex !important;
   position: relative;
+}
+
+@media screen and (min-width: 786px) {
+  .slider-image .swiper-button-prev {
+ width: 100px;
+}
+
+.slider-image .swiper-button-next {
+ width: 100px;
+}
+
 }
