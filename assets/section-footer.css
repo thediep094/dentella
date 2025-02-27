@@ -1,48 +1,72 @@
-.footer {
-  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
-}
-
 .footer:not(.color-scheme-1) {
   border-top: none;
 }
 
 .footer__content-top {
   padding-bottom: 5rem;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
-@media screen and (max-width: 749px) {
-  .footer .grid {
-    display: block;
+.footer__heading-logo {
+  width: 166px;
+  height: auto;
+}
+
+.footer__blocks-wrapper {
+  display: grid;
+  width: 100%;
+  padding-top: 3rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  row-gap: 20px;
+}
+
+@media screen and (min-width: 990px) {
+  .footer__content-top {
+    padding: 59px 20px 20px 166px;
   }
 
-  .footer-block.grid__item {
-    padding: 0;
-    margin: 4rem 0;
-    width: 100%;
+  .footer__blocks-wrapper {
+    margin-left: 10%;
+    padding-top: 0;
   }
 
+  .footer__content-top {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 990px) {
   .footer-block.grid__item:first-child {
     margin-top: 0;
   }
 
   .footer__content-top {
+    padding-top: 4rem;
     padding-bottom: 3rem;
     padding-left: calc(4rem / var(--font-body-scale));
     padding-right: calc(4rem / var(--font-body-scale));
   }
+
+  .footer-block--odd {
+    text-align: right;
+  }
+  .footer-block--odd .list-menu__item--link {
+    justify-content: flex-end;
+  }
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 990px) {
   .footer__content-top .grid {
-    row-gap: 6rem;
+    row-gap: 2rem;
+    column-gap: 10%;
     margin-bottom: 0;
   }
 }
 
 .footer__content-bottom {
   border-top: solid 0.1rem rgba(var(--color-foreground), 0.08);
-  padding-top: 3rem;
 }
 
 .footer__content-bottom:only-child {
@@ -54,7 +78,7 @@
   width: 100%;
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 990px) {
   .footer__content-bottom {
     flex-wrap: wrap;
     padding-top: 0;
@@ -80,7 +104,7 @@
   align-items: center;
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 990px) {
   .footer__localization:empty + .footer__column {
     padding-top: 1.5rem;
   }
@@ -98,6 +122,7 @@
   align-items: center;
   padding-left: 2rem;
   padding-right: 2rem;
+  padding-bottom: 2rem;
 }
 
 @media screen and (min-width: 750px) {
@@ -136,7 +161,7 @@
   margin-top: 0;
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 990px) {
   .footer-block.footer-block--menu:only-child {
     text-align: left;
   }
@@ -150,14 +175,17 @@
 }
 
 .footer-block__heading {
-  margin-bottom: 2rem;
+  min-height: 15px;
+
+  line-height: 15px;
+  margin-bottom: 0.7rem;
   margin-top: 0;
-  font-size: calc(var(--font-heading-scale) * 1.6rem);
+  font-size: calc(var(--font-heading-scale) * 1.5rem);
 }
 
 @media screen and (min-width: 990px) {
   .footer-block__heading {
-    font-size: calc(var(--font-heading-scale) * 1.8rem);
+    font-size: calc(var(--font-heading-scale) * 1.5rem);
   }
 }
 
@@ -196,7 +224,8 @@
     margin: 0;
   }
 
-  .footer-block__newsletter:not(:only-child) .newsletter-form__message--success {
+  .footer-block__newsletter:not(:only-child)
+    .newsletter-form__message--success {
     left: auto;
   }
 
@@ -220,7 +249,7 @@
   }
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 990px) {
   /*
     On a small screen we want all the items to be centered
     because they will be stacked.
@@ -287,7 +316,7 @@
 }
 
 .footer__content-bottom-wrapper--center {
-  justify-content: center;
+  justify-content: start;
 }
 
 .footer__copyright {
@@ -296,7 +325,8 @@
 }
 
 @media screen and (min-width: 750px) {
-  .footer__content-bottom-wrapper:not(.footer__content-bottom-wrapper--center) .footer__copyright {
+  .footer__content-bottom-wrapper:not(.footer__content-bottom-wrapper--center)
+    .footer__copyright {
     text-align: right;
   }
 }
@@ -313,10 +343,14 @@
 }
 
 .footer-block__details-content {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 750px) {
+  ..footer-block__details-content {
+    margin-bottom: 4rem;
+  }
+
   .footer-block__details-content {
     margin-bottom: 0;
   }
@@ -330,6 +364,10 @@
     display: inline;
   }
 
+  .footer-block__details-content > li {
+    height: 26px;
+  }
+
   .footer-block__details-content > li:not(:last-child) {
     margin-right: 1.5rem;
   }
@@ -338,11 +376,7 @@
 .footer-block__details-content .list-menu__item--link,
 .copyright__content a {
   color: rgba(var(--color-foreground), 0.75);
-}
-
-.footer-block__details-content .list-menu__item--active {
-  transition: text-decoration-thickness var(--duration-short) ease;
-  color: rgb(var(--color-foreground));
+  line-height: 2.6rem;
 }
 
 @media screen and (min-width: 750px) {
@@ -360,19 +394,19 @@
 
 @media screen and (max-width: 989px) {
   .footer-block__details-content .list-menu__item--link {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 0;
   }
 }
 
 @media screen and (min-width: 750px) {
   .footer-block__details-content .list-menu__item--link {
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .footer-block__details-content > :first-child .list-menu__item--link {
     padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -392,7 +426,7 @@
   justify-content: flex-end;
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 990px) {
   .footer-block-image,
   .footer-block-image.left,
   .footer-block-image.center,
@@ -420,7 +454,9 @@
   text-align: center;
 }
 
-.footer-block:only-child > .footer-block__brand-info > .footer-block__image-wrapper {
+.footer-block:only-child
+  > .footer-block__brand-info
+  > .footer-block__image-wrapper {
   margin-left: auto;
   margin-right: auto;
 }
@@ -430,7 +466,9 @@
   height: auto;
 }
 
-.footer-block:only-child .footer-block__brand-info .footer__list-social.list-social {
+.footer-block:only-child
+  .footer-block__brand-info
+  .footer__list-social.list-social {
   justify-content: center;
 }
 
@@ -462,7 +500,7 @@
 }
 
 .policies li::before {
-  content: '\00B7';
+  content: "\00B7";
   padding: 0 0.8rem;
 }
 
@@ -490,13 +528,13 @@
 
 /* check for flexbox gap in older Safari versions */
 @supports not (inset: 10px) {
-  @media screen and (max-width: 749px) {
+  @media screen and (max-width: 990px) {
     .footer .grid {
       margin-left: 0;
     }
   }
 
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 990px) {
     .footer__content-top .grid {
       margin-left: -3rem;
     }
