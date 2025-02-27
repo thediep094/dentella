@@ -13,7 +13,7 @@
       }
 
       @media screen and (min-width: 750px) {
-        #Banner-{{ section.id }}: : before
+        #Banner-{{ section.id }}:: before
         , #Banner-{{ section.id }}
         .banner__media::before {
           padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
@@ -98,7 +98,8 @@
           height: image_height,
           class: image_class,
           sizes: sizes,
-          widths: widths
+          widths: widths,
+          fetchpriority: fetch_priority
       }}
     </div>
   {%- elsif section.settings.image_2 == blank -%}
