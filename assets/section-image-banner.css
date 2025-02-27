@@ -420,8 +420,8 @@
   }
 }
 
-.banner__text--less-margin {
-  margin-top: 0.rem;
+.banner__box > * + .banner__text.banner__text--less-margin {
+  margin-top: 0.5rem;
 }
 
 
