@@ -372,14 +372,14 @@
         "heading_7fEcwg": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "THE VIP BOX",
             "heading_size": "h1"
           }
         },
-        "text_E8ECKK": {
+        "text_C7YfyF": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "The Ultimate Luxury Experience",
             "text_style": "body",
             "font_weight": 400
           }
@@ -398,7 +398,7 @@
       },
       "block_order": [
         "heading_7fEcwg",
-        "text_E8ECKK",
+        "text_C7YfyF",
         "buttons_74HpFj"
       ],
       "settings": {
