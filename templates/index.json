@@ -219,11 +219,39 @@
             "text": "FROM VISION TO REALITY",
             "text_style": "caption-with-letter-spacing"
           }
+        },
+        "image_NMTY8t": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/0D0A6678.png"
+          }
+        },
+        "image_WXQhHb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/0D0A6398.png"
+          }
+        },
+        "image_yKqt9i": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/0D0A6402.png"
+          }
+        },
+        "image_x7a6D7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/0D0A6614.png"
+          }
         }
       },
       "block_order": [
         "heading_Fyjh7c",
-        "text_knFN4R"
+        "text_knFN4R",
+        "image_NMTY8t",
+        "image_WXQhHb",
+        "image_yKqt9i",
+        "image_x7a6D7"
       ],
       "settings": {
         "padding_top": 36,
