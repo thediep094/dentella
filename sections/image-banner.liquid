@@ -145,16 +145,26 @@
             </h2>
           {%- when 'text' -%}
             <div
-              class="banner__text rte {% unless block.settings.more_margin_top %}banner__text--less-margin{% endunless %} {{ block.settings.text_style }} {% if block.settings.text_style == 'caption-with-letter-spacing' %}caption-with-letter-spacing--large{% endif %}"
+              class="banner__text rte  {{ block.settings.text_style }} {% if block.settings.text_style == 'caption-with-letter-spacing' %}caption-with-letter-spacing--large{% endif %}"
               {{ block.shopify_attributes }}
             >
+            {% style  %}  
+              .section-{{ section.id }}-padding .banner__text {
+                margin-top: {{ block.settings.margin_top }}px;
+              }
+            {% endstyle %}
               <p>{{ block.settings.text }}</p>
             </div>
           {%- when 'buttons' -%}
             <div
-              class="banner__buttons {% unless block.settings.more_margin_top %}banner__buttons--less-margin{% endunless %} {% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
+              class="banner__buttons  {% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
               {{ block.shopify_attributes }}
             >
+            {% style  %}  
+              .section-{{ section.id }}-padding .banner__buttons {
+                margin-top: {{ block.settings.margin_top }}px;
+              }
+            {% endstyle %}
               {%- if block.settings.button_label_1 != blank -%}
                 <a
                   {% if block.settings.button_link_1 == blank %}
@@ -457,10 +467,10 @@
           "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
         },
         {
-          "type": "checkbox",
-          "id": "more_margin_top",
-          "default": true,
-          "label": "More space top"
+          "type": "number",
+          "id": "margin_top",
+          "default": 35,
+          "label": "Margin top"
         }
       ]
     }, {
@@ -503,10 +513,10 @@
           "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
         },
         {
-          "type": "checkbox",
-          "id": "more_margin_top",
-          "default": true,
-          "label": "More space top"
+          "type": "number",
+          "id": "margin_top",
+          "default": 35,
+          "label": "Margin top"
         }
       ]
     }

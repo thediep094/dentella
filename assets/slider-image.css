@@ -4,7 +4,7 @@
 }
 
 .slider-image__content {
-   position: relative;
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -21,8 +21,8 @@
   display: flex !important;
   position: relative;
   color: #707070;
-   width: 40px;
-    left: -10px;
+  width: 40px;
+  left: -10px;
 }
 
 .slider-image .swiper-button-next {
@@ -34,11 +34,10 @@
 
 @media screen and (min-width: 786px) {
   .slider-image .swiper-button-prev {
- width: 100px;
-}
+    width: 130px;
+  }
 
-.slider-image .swiper-button-next {
- width: 100px;
-}
-
+  .slider-image .swiper-button-next {
+    width: 130px;
+  }
 }
