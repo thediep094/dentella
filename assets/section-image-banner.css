@@ -528,21 +528,26 @@
     text-align: right;
   }
 
+ /* Middle Left */
   .banner__media-heading-desktop--middle-left {
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     text-align: left;
   }
 
+  /* Middle Center */
   .banner__media-heading-desktop--middle-center {
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     text-align: center;
   }
 
+  /* Middle Right */
   .banner__media-heading-desktop--middle-right {
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     text-align: right;
   }
-
   .banner__media-heading-desktop--bottom-left {
     bottom: 0;
     text-align: left;
