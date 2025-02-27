@@ -403,7 +403,7 @@
         "buttons_74HpFj"
       ],
       "settings": {
-        "page_width": true,
+        "page_width": false,
         "image": "shopify://shop_images/Group_22118.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
