@@ -513,6 +513,24 @@
   height: fit-content;
 }
 
+@media screen and (max-width: 750px) {
+   .banner__media-heading-mobile--top {
+    top: 0;
+    text-align: center;
+  }
+
+   .banner__media-heading-mobile--center {
+    top: 50px;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+
+   .banner__media-heading-mobile--bottom {
+    bottom: 3.4rem;
+    text-align: center;
+  }
+}
+
 @media screen and (min-width: 750px) {
   .banner__media-heading-desktop--top-left {
     top: 0;
