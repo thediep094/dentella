@@ -40,7 +40,7 @@
           "settings": {
             "text": "<strong>Welcome to dentella</strong>",
             "text_style": "caption-with-letter-spacing",
-            "font_weight": 600
+            "more_margin_top": true
           }
         },
         "text_9YpMXb": {
@@ -48,7 +48,7 @@
           "settings": {
             "text": "Dentella redefines nightwear with a perfect balance of artistry and comfort. Every piece reflects our commitment to time less beauty and effortless elegance.",
             "text_style": "body",
-            "font_weight": 400
+            "more_margin_top": true
           }
         },
         "button": {
@@ -59,7 +59,8 @@
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": false,
+            "more_margin_top": true
           }
         }
       },
@@ -382,7 +383,7 @@
           "settings": {
             "text": "The Ultimate Luxury Experience",
             "text_style": "body",
-            "font_weight": 400
+            "more_margin_top": false
           }
         },
         "buttons_kJpGk4": {
@@ -393,7 +394,8 @@
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": false,
+            "more_margin_top": false
           }
         }
       },
