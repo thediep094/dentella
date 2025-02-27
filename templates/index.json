@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "video_HKpqmU": {
       "type": "video",
@@ -198,7 +198,36 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "standard"
+        "quick_add": "standard",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "slider_image_qQJNHB": {
+      "type": "slider-image",
+      "blocks": {
+        "heading_Fyjh7c": {
+          "type": "heading",
+          "settings": {
+            "heading": "THE PROCESS",
+            "heading_size": "hxl"
+          }
+        },
+        "text_knFN4R": {
+          "type": "text",
+          "settings": {
+            "text": "FROM VISION TO REALITY",
+            "text_style": "caption-with-letter-spacing"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Fyjh7c",
+        "text_knFN4R"
+      ],
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -206,6 +235,7 @@
     "video_HKpqmU",
     "image_banner",
     "image_overwrite_PhGGyV",
-    "block_collections_M39tU4"
+    "block_collections_M39tU4",
+    "slider_image_qQJNHB"
   ]
 }
