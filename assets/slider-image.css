@@ -7,9 +7,15 @@
   overflow: hidden;
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .slider-image .swiper-button-prev {
   display: block !important;
+  position: relative;
+}
+
+.slider-image .swiper-button-next {
+  display: block !important;
+  position: relative;
 }
