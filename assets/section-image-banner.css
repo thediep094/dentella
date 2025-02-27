@@ -420,6 +420,14 @@
   }
 }
 
+.banner__text--less-margin {
+  margin-top: 1rem;
+}
+
+
+.banner__buttons--less-margin {
+  margin-top: 1rem;
+}
 .banner__box > * + * {
   margin-top: 1rem;
 }
