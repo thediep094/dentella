@@ -7,7 +7,7 @@
   overflow: hidden;
   position: relative;
   display: flex;
-  justify-content
+  flex-direction: column;
 }
 
 .slider-image .swiper-button-prev {
