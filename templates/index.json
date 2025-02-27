@@ -289,6 +289,26 @@
     },
     "image_banner_2_hafH37": {
       "type": "image-banner-2",
+      "blocks": {
+        "heading1_7yKqb9": {
+          "type": "heading1",
+          "settings": {
+            "heading": "Shades of Blue",
+            "heading_size": "h1",
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body",
+            "font_weight": 400,
+            "button_label_1": "View Collection",
+            "button_link_1": "shopify://collections/dentella",
+            "button_style_secondary_1": false,
+            "desktop_content_position": "top-center",
+            "mobile_content_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "heading1_7yKqb9"
+      ],
       "settings": {
         "image": "shopify://shop_images/Component_1513_1.png",
         "image_2": "shopify://shop_images/czRectangle-1-copy-3.png",
@@ -296,7 +316,6 @@
         "image_height": "large",
         "color_scheme": "",
         "image_behavior": "none",
-        "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true,
         "padding_top": 36,
