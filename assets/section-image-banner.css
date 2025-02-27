@@ -502,6 +502,9 @@
   }
 }
 
+.banner__media-wrapper {
+  display: flex !important;
+}
 .banner__media-heading {
   width: 100%;
   height: fit-content;
