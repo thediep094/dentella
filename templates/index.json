@@ -275,7 +275,7 @@
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "",
-        "image_ratio": "adapt",
+        "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
@@ -283,8 +283,8 @@
         "quick_add": "standard",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 64,
+        "padding_bottom": 64
       }
     }
   },
