@@ -505,6 +505,7 @@
 .banner__media-wrapper {
   display: flex !important;
   position: relative;
+  z-index: 2;
 }
 .banner__media-heading {
   position: absolute;
