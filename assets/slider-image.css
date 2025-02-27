@@ -3,6 +3,6 @@
   height: auto;
 }
 
-.slider-image .swiper-wrapper {
+.slider-image .slider-image__wrapper {
   overflow: hidden;
 }
