@@ -405,7 +405,7 @@
         "image": "shopify://shop_images/Group_22118.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
-        "desktop_content_position": "middle-right",
+        "desktop_content_position": "top-right",
         "show_text_box": false,
         "desktop_content_alignment": "left",
         "color_scheme": "",
