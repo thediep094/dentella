@@ -432,7 +432,6 @@
 .card--standard > .card__content .card__information {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   flex-wrap: wrap;
   padding-left: 0;
   padding-right: 0;
@@ -441,7 +440,8 @@
 @media screen and (min-width: 750px) {
   .card--standard > .card__content .card__information {
  flex-direction: row;
-    
+      justify-content: space-between;
+
 }
 
 }
