@@ -369,6 +369,39 @@
     },
     "image_banner_LkWi4K": {
       "type": "image-banner",
+      "blocks": {
+        "heading_FHYMTJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "THE VIP BOX",
+            "heading_size": "h1"
+          }
+        },
+        "text_3LFHrK": {
+          "type": "text",
+          "settings": {
+            "text": "The Ultimate Luxury Experience",
+            "text_style": "body",
+            "font_weight": 400
+          }
+        },
+        "buttons_kJpGk4": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Contact Us",
+            "button_link_1": "shopify://pages/contact",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_FHYMTJ",
+        "text_3LFHrK",
+        "buttons_kJpGk4"
+      ],
       "settings": {
         "page_width": false,
         "image": "shopify://shop_images/Group_22118.png",
