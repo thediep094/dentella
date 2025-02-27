@@ -504,8 +504,57 @@
 
 .banner__media-wrapper {
   display: flex !important;
+  position: relative;
 }
 .banner__media-heading {
+  position: absolute;
   width: 100%;
   height: fit-content;
+}
+
+@media screen and (min-width: 750px) {
+  .banner__media-heading-desktop--top-left {
+    top: 0;
+    text-align: left;
+  }
+
+  .banner__media-heading-desktop--top-center {
+    top: 0;
+    text-align: center;
+  }
+
+  .banner__media-heading-desktop--top-right {
+    top: 0;
+    text-align: right;
+  }
+
+  .banner__media-heading-desktop--middle-left {
+    top: 0;
+    text-align: left;
+  }
+
+  .banner__media-heading-desktop--middle-center {
+    top: 0;
+    text-align: center;
+  }
+
+  .banner__media-heading-desktop--middle-right {
+    top: 0;
+    text-align: right;
+  }
+
+  .banner__media-heading-desktop--bottom-left {
+    bottom: 0;
+    text-align: left;
+  }
+
+  .banner__media-heading-desktop--bottom-center {
+    bottom: 0;
+    text-align: center;
+  }
+
+  .banner__media-heading-desktop--bottom-right {
+    bottom: 0;
+    text-align: right;
+  }
 }
