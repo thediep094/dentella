@@ -1258,7 +1258,8 @@ input.mobile-facets__checkbox {
   visibility: hidden;
 }
 
-.facets__color .facets-layout-list {
+.facets__color .facets-layout-list,
+.facets__color .mobile-facets__list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1282,7 +1283,9 @@ width: 30px;
     display: block;
 }
 
-.facets__size .facets-layout-list {
+.facets__size .facets-layout-list,
+.facets__size .mobile-facets__list
+{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
