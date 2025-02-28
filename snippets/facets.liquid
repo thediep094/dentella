@@ -231,9 +231,9 @@
                                     )
                                   </span>
                                  {% elsif filter.param_name == 'filter.v.option.size' %}
-                                    <span class="facet-checkbox__text" aria-hidden="true">
-                                    <span class="facet-checkbox__text-label--size">{{- value.label | escape }}</span>
-                                  </span>
+                                    <div class="facet-checkbox__text" aria-hidden="true">
+                                    <div class="facet-checkbox__text-label--size">{{- value.label | escape }}</div>
+                                  </div>
                                   <span class="visually-hidden">
                                     {{- value.label | escape }} (
                                     {%- if value.count == 1 -%}
