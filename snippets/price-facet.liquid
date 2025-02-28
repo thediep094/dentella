@@ -60,6 +60,8 @@
       data-max="{{ filter.range_max | money_without_currency }}"
       {%- if filter.min_value.value -%}
         value="{{ filter.min_value.value | money_without_currency }}"
+      {% else %}
+        value="0"
       {%- endif -%}
     >
     <input
@@ -71,6 +73,8 @@
       max="{{ filter.range_max | money_without_currency }}"
       {%- if filter.max_value.value -%}
         value="{{ filter.max_value.value | money_without_currency }}"
+      {% else %}
+        value="{{ filter.range_max | money_without_currency }}"
       {%- endif -%}
       data-min="0"
       data-max="{{ filter.range_max | money_without_currency }}"
