@@ -1286,6 +1286,7 @@ width: 30px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  row-gap: 8px;
 }
 
 .facets__size .facet-checkbox{
