@@ -78,7 +78,10 @@
                         <span class="active-facets__button-inner button button--tertiary">
                           {{ filter.label | escape }}:
                           {% if filter.param_name == 'filter.v.option.color' %}
-                            <span class="active-facets__button-inner" style="background: {{ value.label }}"></span>
+                            <span
+                              class="active-facets__button-inner--color"
+                              style="background: {{ value.label }}"
+                            ></span>
                           {% else %}
                             {{ value.label | escape }}
                           {% endif %}
