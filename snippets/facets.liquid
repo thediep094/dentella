@@ -515,10 +515,7 @@
       <facet-filters-form>
         <form
           id="FacetFiltersFormMobile"
-          class="
-            mobile-facets    {% if filter.param_name == 'filter.v.option.color' %}facets__color{% endif %}
-            {% if filter.param_name == 'filter.v.option.size' %}facets__size{% endif %}
-          "
+          class="            mobile-facets"
         >
           <div class="mobile-facets__inner gradient">
             <div class="mobile-facets__header">
@@ -570,7 +567,10 @@
                     {% when 'boolean', 'list' %}
                       <details
                         id="Details-Mobile-{{ filter.param_name | escape }}-{{ section.id }}"
-                        class="mobile-facets__details js-filter"
+                        class="
+                          mobile-facets__details js-filter  {% if filter.param_name == 'filter.v.option.color' %}facets__color{% endif %}
+                          {% if filter.param_name == 'filter.v.option.size' %}facets__size{% endif %}
+                        "
                         data-index="mobile-{{ forloop.index }}"
                       >
                         <summary class="mobile-facets__summary focus-inset">
