@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "video_HKpqmU": {
       "type": "video",
@@ -39,14 +39,16 @@
           "type": "text",
           "settings": {
             "text": "<strong>Welcome to dentella</strong>",
-            "text_style": "caption-with-letter-spacing"
+            "text_style": "caption-with-letter-spacing",
+            "margin_top": 35
           }
         },
         "text_9YpMXb": {
           "type": "text",
           "settings": {
             "text": "Dentella redefines nightwear with a perfect balance of artistry and comfort. Every piece reflects our commitment to time less beauty and effortless elegance.",
-            "text_style": "body"
+            "text_style": "body",
+            "margin_top": 35
           }
         },
         "button": {
@@ -57,7 +59,8 @@
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": false,
+            "margin_top": 35
           }
         }
       },
@@ -106,14 +109,16 @@
           "type": "text",
           "settings": {
             "text": "<strong>Where art meets fashion</strong>",
-            "text_style": "caption-with-letter-spacing"
+            "text_style": "caption-with-letter-spacing",
+            "margin_top": 35
           }
         },
         "text_Atn6F8": {
           "type": "text",
           "settings": {
             "text": "Every design tells a story of creativity and elegance. crafted for the modern woman who values both style and meaning. From concept to creation, it's all about you.",
-            "text_style": "body"
+            "text_style": "body",
+            "margin_top": 35
           }
         },
         "buttons_7dkxit": {
@@ -124,7 +129,8 @@
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": false,
+            "margin_top": 35
           }
         },
         "collection_EqJ4RN": {
@@ -216,7 +222,8 @@
           "type": "text",
           "settings": {
             "text": "FROM VISION TO REALITY",
-            "text_style": "caption-with-letter-spacing"
+            "text_style": "caption-with-letter-spacing",
+            "margin_top": 35
           }
         },
         "image_NMTY8t": {
@@ -253,6 +260,7 @@
         "image_x7a6D7"
       ],
       "settings": {
+        "row_per_page": 3,
         "color_scheme": "scheme-2",
         "padding_top": 36,
         "padding_bottom": 100
@@ -296,11 +304,13 @@
             "heading_size": "h1",
             "text": "",
             "text_style": "body",
+            "margin_top_text": 0,
             "button_label_1": "View Collection",
             "button_link_1": "shopify://collections/dentella",
             "button_style_secondary_1": false,
             "desktop_content_position": "middle-left",
-            "mobile_content_alignment": "center"
+            "mobile_content_alignment": "center",
+            "margin_top": 0
           }
         },
         "heading2_w6iaXa": {
@@ -310,11 +320,13 @@
             "heading_size": "h1",
             "text": "",
             "text_style": "body",
+            "margin_top_text": 0,
             "button_label_1": "View Collection",
             "button_link_1": "shopify://collections/dentella",
             "button_style_secondary_1": false,
             "desktop_content_position": "middle-left",
-            "mobile_content_alignment": "center"
+            "mobile_content_alignment": "center",
+            "margin_top": 0
           }
         }
       },
@@ -351,12 +363,12 @@
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "",
-        "image_ratio": "adapt",
+        "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "none",
+        "quick_add": "standard",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -377,7 +389,8 @@
           "type": "text",
           "settings": {
             "text": "The Ultimate Luxury Experience",
-            "text_style": "body"
+            "text_style": "body",
+            "margin_top": 35
           }
         },
         "buttons_kJpGk4": {
@@ -388,7 +401,8 @@
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": false,
+            "margin_top": 35
           }
         }
       },

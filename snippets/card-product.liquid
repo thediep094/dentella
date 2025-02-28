@@ -347,6 +347,7 @@
               >
                 {{ card_product.title | escape }}
               </a>
+              
             </div>
           </div>
           <div class="card__badge {{ settings.badge_position }}">
@@ -384,6 +385,9 @@
             >
               {{ card_product.title | escape }}
             </a>
+            <div class=" card__heading-subtitle">
+                {{ card_product.type | escape }}
+              </div>
           </div>
           <div class="card-information">
             {%- if show_vendor -%}
