@@ -1264,6 +1264,10 @@ input.mobile-facets__checkbox {
   flex-wrap: wrap;
 }
 
+.facets__color .facet-checkbox{
+  padding: 0 0.8rem 0 0;
+}
+
 
 .facet-checkbox__text-label--color {
       background: #00EEC9;
