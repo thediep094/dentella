@@ -1,165 +1,46 @@
-<div class="price-range-container">
-  <!-- Hidden inputs for form submission -->
+<span class="field-currency">{{ cart.currency.symbol }}</span>
+
+<div class="field">
   <input
-    type="hidden"
+    class="field__input"
     name="{{ filter.min_value.param_name }}"
-    id="{{ id_prefix }}{{ filter.label | escape }}-GTE-hidden"
-    value="{% if filter.min_value.value %}{{ filter.min_value.value | money_without_currency }}{% else %}0{% endif %}"
-  >
+    id="{{ id_prefix }}{{ filter.label | escape }}-GTE"
+    {%- if filter.min_value.value -%}
+      value="{{ filter.min_value.value | money_without_currency }}"
+    {%- endif -%}
+    type="text"
+    inputmode="decimal"
+    placeholder="0"
+    data-pattern="\d| |,|\."
+    data-min="0"
+    data-max="{{ filter.range_max | money_without_currency }}"
 
-  <input
-    type="hidden"
-    name="{{ filter.max_value.param_name }}"
-    id="{{ id_prefix }}{{ filter.label | escape }}-LTE-hidden"
-    value="{% if filter.max_value.value %}{{ filter.max_value.value | money_without_currency }}{% else %}{{ filter.range_max | money_without_currency }}{% endif %}"
-  >
-
-  <!-- Slider display -->
-  <div class="slider-container">
-    <span class="field-currency">{{ cart.currency.symbol }}</span>
-    <span class="min-value-output">
-      {% if filter.min_value.value %}
-        {{ filter.min_value.value | money_without_currency }}
-      {% else %}
-        0
-      {% endif %}
-    </span>
-
-    <div class="range-slider">
-      <div class="range-track"></div>
-      <input
-        type="range"
-        class="min-slider"
-        min="0"
-        max="{{ filter.range_max | money_without_currency }}"
-        value="{% if filter.min_value.value %}{{ filter.min_value.value | money_without_currency }}{% else %}0{% endif %}"
-      >
-      <input
-        type="range"
-        class="max-slider"
-        min="0"
-        max="{{ filter.range_max | money_without_currency }}"
-        value="{% if filter.max_value.value %}{{ filter.max_value.value | money_without_currency }}{% else %}{{ filter.range_max | money_without_currency }}{% endif %}"
-      >
-    </div>
-
-    <span class="field-currency">{{ cart.currency.symbol }}</span>
-    <span class="max-value-output">
-      {% if filter.max_value.value %}
-        {{ filter.max_value.value | money_without_currency }}
-      {% else %}
-        {{ filter.range_max | money_without_currency }}
-      {% endif %}
-    </span>
-  </div>
+  >a
+  <label class="field__label" for="{{ id_prefix }}{{ filter.label | escape }}-GTE">
+    {{- 'products.facets.from' | t -}}
+  </label>
 </div>
 
-<style>
-  .price-range-container {
-    padding: 20px;
-  }
+{%- if filter_type != 'vertical' -%}
+  <span class="field-currency">{{ cart.currency.symbol }}</span>
+{%- endif -%}
 
-  .slider-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .range-slider {
-    position: relative;
-    width: 200px;
-    height: 10px;
-  }
-
-  .range-track {
-    position: absolute;
-    height: 4px;
-    background: #ddd;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-  }
-
-  input[type="range"] {
-    position: absolute;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    height: 10px;
-    background: transparent;
-    pointer-events: none;
-    -webkit-appearance: none;
-  }
-
-  input[type="range"]::-webkit-slider-thumb {
-    pointer-events: all;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #007bff;
-    cursor: pointer;
-    -webkit-appearance: none;
-  }
-
-  input[type="range"]::-moz-range-thumb {
-    pointer-events: all;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #007bff;
-    cursor: pointer;
-  }
-
-  .field-currency {
-    font-weight: bold;
-  }
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const containers = document.querySelectorAll('.price-range-container');
-  
-  containers.forEach(container => {
-    const minSlider = container.querySelector('.min-slider');
-    const maxSlider = container.querySelector('.max-slider');
-    const minHidden = container.querySelector('#{{ id_prefix }}{{ filter.label | escape }}-GTE-hidden');
-    const maxHidden = container.querySelector('#{{ id_prefix }}{{ filter.label | escape }}-LTE-hidden');
-    const minOutput = container.querySelector('.min-value-output');
-    const maxOutput = container.querySelector('.max-value-output');
-    
-    function updateValues() {
-      let minValue = parseFloat(minSlider.value);
-      let maxValue = parseFloat(maxSlider.value);
-      
-      // Ensure min doesn't exceed max
-      if (minValue > maxValue) {
-        minSlider.value = maxValue;
-        minValue = maxValue;
-      }
-      
-      // Update hidden inputs and display
-      minHidden.value = minValue;
-      maxHidden.value = maxValue;
-      minOutput.textContent = minValue;
-      maxOutput.textContent = maxValue;
-      
-      // Update track highlight
-      const minPercent = (minValue / parseFloat(maxSlider.max)) * 100;
-      const maxPercent = (maxValue / parseFloat(maxSlider.max)) * 100;
-      const track = container.querySelector('.range-track');
-      track.style.background = `linear-gradient(to right, 
-        #ddd ${minPercent}%, 
-        #007bff ${minPercent}%, 
-        #007bff ${maxPercent}%, 
-        #ddd ${maxPercent}%)`;
-    }
-    
-    minSlider.addEventListener('input', updateValues);
-    maxSlider.addEventListener('input', updateValues);
-    
-    // Initial update
-    updateValues();
-  });
-});
-</script>
+<div class="field">
+  <input
+    class="field__input"
+    name="{{ filter.max_value.param_name }}"
+    id="{{ id_prefix }}{{ filter.label | escape }}-LTE"
+    {%- if filter.max_value.value -%}
+      value="{{ filter.max_value.value | money_without_currency }}"
+    {%- endif -%}
+    type="text"
+    inputmode="decimal"
+    placeholder="{{ filter.range_max | money_without_currency }}"
+    data-pattern="\d| |,|\."
+    data-min="0"
+    data-max="{{ filter.range_max | money_without_currency }}"
+  >
+  <label class="field__label" for="{{ id_prefix }}{{ filter.label | escape }}-LTE">
+    {{- 'products.facets.to' | t -}}
+  </label>
+</div>
