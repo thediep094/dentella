@@ -306,6 +306,7 @@ class PriceRange extends HTMLElement {
       element.addEventListener('change', this.onRangeChange.bind(this));
       element.addEventListener('keydown', this.onKeyDown.bind(this));
     });
+    console.log("abc")
     this.setMinAndMaxValues();
   }
 
