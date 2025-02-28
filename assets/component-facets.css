@@ -1281,3 +1281,12 @@ width: 30px;
     border-radius: 50%;
     display: block;
 }
+
+.facet-checkbox__text-label--size {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ebebeb;
+}
