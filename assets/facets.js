@@ -306,7 +306,6 @@ class PriceRange extends HTMLElement {
       element.addEventListener('change', this.onRangeChange.bind(this));
       element.addEventListener('keydown', this.onKeyDown.bind(this));
     });
-    console.log("abc")
     this.setMinAndMaxValues();
   }
 
@@ -326,10 +325,18 @@ class PriceRange extends HTMLElement {
     const inputs = this.querySelectorAll('input');
     const minInput = inputs[0];
     const maxInput = inputs[1];
+    const minValue = document.getElementById('minValue');
+    const maxValue = document.getElementById('maxValue');
     if (maxInput.value) minInput.setAttribute('data-max', maxInput.value);
     if (minInput.value) maxInput.setAttribute('data-min', minInput.value);
     if (minInput.value === '') maxInput.setAttribute('data-min', 0);
     if (maxInput.value === '') minInput.setAttribute('data-max', maxInput.getAttribute('data-max'));
+
+     if (maxInput.value) maxValue.textContent = maxInput.value;
+    if (minInput.value) minValue.textContent = minInput.value;
+    if (minInput.value === '') minValue.textContent = 0
+    if (maxInput.value === '')  maxValue.textContent = maxInput.getAttribute('data-max'));
+    
   }
 
   adjustToValidValues(input) {
