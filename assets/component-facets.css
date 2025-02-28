@@ -1265,9 +1265,12 @@ input.mobile-facets__checkbox {
   flex-wrap: wrap;
 }
 
-.facets__color .facet-checkbox,
-.facets__color .mobile-facets__label{
+.facets__color .facet-checkbox{
   padding: 0 0.8rem 0 0;
+}
+
+.facets__color .mobile-facets__label{
+  padding: 1.5rem 0.8rem 0 0;
 }
 
 .active-facets__button-inner--color {
@@ -1293,11 +1296,16 @@ width: 30px;
   row-gap: 8px;
 }
 
-.facets__size .facet-checkbox,
-.facets__size .mobile-facets__label
+.facets__size .facet-checkbox
 {
   padding: 0 0.8rem 0 0;
 }
+
+
+.facets__size .mobile-facets__label{
+  padding: 1.5rem 0.8rem 0 0;
+}
+
 
 .facets__size .facet-checkbox > input[type='checkbox']:checked ~ .facet-checkbox__text > .facet-checkbox__text-label--size {
   background: rgb(var(--color-button));
