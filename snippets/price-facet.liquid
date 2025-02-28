@@ -147,6 +147,8 @@
   }
 </style>
 <script>
+   document.addEventListener('DOMContentLoaded', function () {
+     
     const minSlider = document.getElementById('{{ id_prefix }}{{ filter.label | escape }}-GTE');
     const maxSlider = document.getElementById('{{ id_prefix }}{{ filter.label | escape }}-LTE');
     const rangeTrack = document.getElementById('rangeTrack');
@@ -183,4 +185,5 @@
 
     // Gọi lần đầu để khởi tạo
     updateSlider();
+   })
 </script>
