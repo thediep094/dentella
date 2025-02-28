@@ -62,7 +62,7 @@
       "type": "main-collection-product-grid",
       "settings": {
         "products_per_page": 16,
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "color_scheme": "scheme-1",
         "image_ratio": "portrait",
         "image_shape": "default",
@@ -92,7 +92,8 @@
           "type": "text",
           "settings": {
             "text": "The Ultimate Luxury Experience",
-            "text_style": "body"
+            "text_style": "body",
+            "margin_top": 35
           }
         },
         "buttons_kJpGk4": {
@@ -103,7 +104,8 @@
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": false,
+            "margin_top": 35
           }
         }
       },
