@@ -338,7 +338,7 @@ class PriceRange extends HTMLElement {
     if (minInput.value) minValue.textContent = minInput.value;
     if (minInput.value === '') minValue.textContent = 0
     if (maxInput.value === '')  maxValue.textContent = maxInput.getAttribute('data-max');
-
+  console.log(minInput.value,maxInput.value )
     if (minInput.value === '' && maxInput.value === '') {
        rangeTrack.style.left = `0%`;
       rangeTrack.style.width = `100%`;
