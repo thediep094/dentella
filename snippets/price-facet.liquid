@@ -44,3 +44,110 @@
     {{- 'products.facets.to' | t -}}
   </label>
 </div>
+
+<div class="slider-container">
+  <div class="range-slider">
+    <div class="range-track" id="rangeTrack"></div>
+    <input type="range" class="min-slider" id="minSlider" min="0" max="1000" value="0">
+    <input type="range" class="max-slider" id="maxSlider" min="0" max="1000" value="1000">
+  </div>
+  <div class="price-display">
+    <span>$<span id="minValue">0</span></span>
+    <span>$<span id="maxValue">1000</span></span>
+  </div>
+</div>
+<style>
+  .slider-container {
+    width: 300px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+
+  .range-slider {
+    position: relative;
+    height: 10px;
+    background: #ddd; /* Màu xám cho đoạn không kéo */
+    border-radius: 5px;
+  }
+
+  .range-track {
+    position: absolute;
+    height: 100%;
+    background: #000; /* Màu đen cho đoạn đã kéo */
+    border-radius: 5px;
+  }
+
+  .range-slider input[type="range"] {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    top: -5px;
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .range-slider input[type="range"]::-webkit-slider-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #000; /* Nút kéo màu đen */
+    pointer-events: auto;
+    -webkit-appearance: none;
+    cursor: pointer;
+  }
+
+  .range-slider input[type="range"]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #000; /* Nút kéo màu đen */
+    pointer-events: auto;
+    cursor: pointer;
+  }
+
+  .price-display {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+</style>
+<script>
+    const minSlider = document.getElementById('minSlider');
+    const maxSlider = document.getElementById('maxSlider');
+    const rangeTrack = document.getElementById('rangeTrack');
+    const minValue = document.getElementById('minValue');
+    const maxValue = document.getElementById('maxValue');
+
+    function updateSlider() {
+      let min = parseInt(minSlider.value);
+      let max = parseInt(maxSlider.value);
+
+      // Đảm bảo min không vượt quá max và ngược lại
+      if (min > max) {
+        minSlider.value = max;
+        min = max;
+      }
+      if (max < min) {
+        maxSlider.value = min;
+        max = min;
+      }
+
+      // Cập nhật vị trí và chiều rộng của range track
+      const minPercent = (min / 1000) * 100;
+      const maxPercent = (max / 1000) * 100;
+      rangeTrack.style.left = `${minPercent}%`;
+      rangeTrack.style.width = `${maxPercent - minPercent}%`;
+
+      // Cập nhật giá trị hiển thị
+      minValue.textContent = min;
+      maxValue.textContent = max;
+    }
+
+    minSlider.addEventListener('input', updateSlider);
+    maxSlider.addEventListener('input', updateSlider);
+
+    // Gọi lần đầu để khởi tạo
+    updateSlider();
+</script>
