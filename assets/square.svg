@@ -1,1 +1,6 @@
-<svg width="16px" height="16px" viewBox="0 0 16 16"><rect width="16" height="16" fill="none" stroke="currentColor"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="Path_78155" data-name="Path 78155" fill="#fff">
+    <path d="M 24 24 L 1 24 L 1 1 L 24 1 L 24 24 Z" stroke="none"/>
+    <path d="M 2 2 L 2 23 L 23 23 L 23 2 L 2 2 M 0 0 L 25 0 L 25 25 L 0 25 L 0 0 Z" stroke="none" fill="#262626"/>
+  </g>
+</svg>

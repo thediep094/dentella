@@ -313,7 +313,7 @@
 }
 
 .card__heading-title {
-  font-size: calc(var(--font-heading-scale) * 1.8rem);
+  font-size: calc(var(--font-heading-scale) * 1.6rem);
   line-height: calc(1 + 0.3 / var(--font-heading-scale));
   margin-top: 0;
   margin-bottom: 0;
@@ -439,11 +439,9 @@
 
 @media screen and (min-width: 750px) {
   .card--standard > .card__content .card__information {
- flex-direction: row;
-      justify-content: space-between;
-
-}
-
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .card--card.card--media .card__inner .card__information,
@@ -609,4 +607,8 @@
   .grid__item:nth-child(8n) .product-card-wrapper:hover .shape--blob {
     clip-path: polygon(var(--shape--blob-5));
   }
+}
+
+.card__heading-subtitle {
+  color: #9d9d9d;
 }

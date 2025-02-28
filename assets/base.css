@@ -1706,7 +1706,7 @@ details[open] > .share-button__fallback {
   border: 0;
 }
 
-.field:before,
+/* .field:before,
 .select:before,
 .customer .field:before,
 .customer select:before,
@@ -1723,7 +1723,7 @@ details[open] > .share-button__fallback {
     var(--inputs-shadow-vertical-offset) var(--inputs-shadow-blur-radius)
     rgba(var(--color-shadow), var(--inputs-shadow-opacity));
   z-index: -1;
-}
+} */
 
 .field:after,
 .select:after,
