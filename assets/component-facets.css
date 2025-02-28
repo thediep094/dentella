@@ -1269,6 +1269,7 @@ input.mobile-facets__checkbox {
 }
 
 .active-facets__button-inner--color {
+  margin-left: 10px;
     width: 15px;
     height: 15px;
     border-radius: 50%;
