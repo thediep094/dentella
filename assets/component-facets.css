@@ -1254,6 +1254,10 @@ input.mobile-facets__checkbox {
   }
 }
 
+.facets__color input[type="checkbox"]{
+  visibility: hidden;
+}
+
 
 .facet-checkbox__text-label--color {
       background: #00EEC9;
