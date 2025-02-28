@@ -1270,7 +1270,7 @@ input.mobile-facets__checkbox {
 }
 
 .facets__color .mobile-facets__list{
-  padding: 1.5rem 0.8rem 0 0;
+   padding: 0 0.8rem 0 1.5rem;
 }
 
 .active-facets__button-inner--color {
@@ -1303,7 +1303,7 @@ width: 30px;
 
 
 .facets__size .mobile-facets__list{
-  padding: 1.5rem 0.8rem 0 0;
+  padding: 0 0.8rem 0 1.5rem;
 }
 
 
