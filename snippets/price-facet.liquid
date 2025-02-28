@@ -43,4 +43,41 @@
   <label class="field__label" for="{{ id_prefix }}{{ filter.label | escape }}-LTE">
     {{- 'products.facets.to' | t -}}
   </label>
+
+  <!-- Slider display -->
+  <div class="slider-container">
+    <span class="field-currency">{{ cart.currency.symbol }}</span>
+    <span class="min-value-output">
+      {% if filter.min_value.value %}{{ filter.min_value.value | money_without_currency }}{% else %}0{% endif %}
+    </span>
+
+    <div class="range-slider">
+      <div class="range-track">
+        <div class="range-track-fill"></div>
+      </div>
+      <input
+        type="range"
+        class="min-slider"
+        min="0"
+        max="{{ filter.range_max | money_without_currency }}"
+        value="{% if filter.min_value.value %}{{ filter.min_value.value | money_without_currency }}{% else %}0{% endif %}"
+      >
+      <input
+        type="range"
+        class="max-slider"
+        min="0"
+        max="{{ filter.range_max | money_without_currency }}"
+        value="{% if filter.max_value.value %}{{ filter.max_value.value | money_without_currency }}{% else %}{{ filter.range_max | money_without_currency }}{% endif %}"
+      >
+    </div>
+
+    <span class="field-currency">{{ cart.currency.symbol }}</span>
+    <span class="max-value-output">
+      {% if filter.max_value.value -%}
+        {{- filter.max_value.value | money_without_currency -}}
+      {%- else -%}
+        {{- filter.range_max | money_without_currency -}}
+      {%- endif %}
+    </span>
+  </div>
 </div>
