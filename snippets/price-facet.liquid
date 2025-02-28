@@ -152,8 +152,6 @@
     const minSlider = document.getElementById('{{ id_prefix }}{{ filter.label | escape }}-GTE');
     const maxSlider = document.getElementById('{{ id_prefix }}{{ filter.label | escape }}-LTE');
     const rangeTrack = document.getElementById('rangeTrack');
-    const minValue = document.getElementById('minValue');
-    const maxValue = document.getElementById('maxValue');
 
     function updateSlider() {
       let min = parseInt(minSlider.value);
@@ -176,9 +174,6 @@
       rangeTrack.style.left = `${minPercent}%`;
       rangeTrack.style.width = `${maxPercent - minPercent}%`;
 
-      // Cập nhật giá trị hiển thị
-      minValue.textContent = min;
-      maxValue.textContent = max;
     }
 
     minSlider.addEventListener('input', updateSlider);
