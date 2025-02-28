@@ -1293,7 +1293,7 @@ width: 30px;
   padding: 0 0.8rem 0 0;
 }
 
-.facets__size .facet-checkbox > input[type='checkbox']:checked ~ .facet-checkbox__text-label--size {
+.facets__size .facet-checkbox > input[type='checkbox']:checked > .facet-checkbox__text-label--size {
   background: rgb(var(--color-button));
   color: rgb(var(--color-button-text));
   
