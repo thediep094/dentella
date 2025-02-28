@@ -84,12 +84,13 @@
     <span
       ><span id="minValue">
         {{- filter.min_value.value | money_without_currency -}}
-        {{- shop.currency -}}
-      </span></span
-    >
+      </span>
+      {{- shop.currency -}}
+    </span>
     <span
-      ><span id="maxValue">{{ filter.max_value.value | money_without_currency }}</span></span
-    >
+      ><span id="maxValue">{{ filter.max_value.value | money_without_currency }}</span>
+      {{- shop.currency -}}
+    </span>
   </div>
 </div>
 <style>
