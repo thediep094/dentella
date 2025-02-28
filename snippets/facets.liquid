@@ -278,7 +278,9 @@
                                       disabled
                                     {% endif %}
                                   >
-                                  {% unless filter.param_name == 'filter.v.option.color' %}
+                                  {% unless filter.param_name == 'filter.v.option.color'
+                                    or filter.param_name == 'filter.v.option.size'
+                                  %}
                                     {%- if presentation == 'image' -%}
                                       <div class="facets__image-wrapper">
                                         {%- if value.image -%}
