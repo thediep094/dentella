@@ -547,7 +547,10 @@
             </div>
             <div
               id="FacetsWrapperMobile"
-              class="mobile-facets__main has-submenu gradient"
+              class="
+                mobile-facets__main has-submenu gradient    {% if filter.param_name == 'filter.v.option.color' %}facets__color{% endif %}
+                {% if filter.param_name == 'filter.v.option.size' %}facets__size{% endif %}
+              "
             >
               {%- if enable_filtering -%}
                 {%- for filter in results.filters -%}
