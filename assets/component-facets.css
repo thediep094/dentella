@@ -1265,7 +1265,8 @@ input.mobile-facets__checkbox {
   flex-wrap: wrap;
 }
 
-.facets__color .facet-checkbox{
+.facets__color .facet-checkbox,
+.facets__color .mobile-facets__label{
   padding: 0 0.8rem 0 0;
 }
 
@@ -1292,7 +1293,9 @@ width: 30px;
   row-gap: 8px;
 }
 
-.facets__size .facet-checkbox{
+.facets__size .facet-checkbox,
+.facets__size .mobile-facets__label
+{
   padding: 0 0.8rem 0 0;
 }
 
