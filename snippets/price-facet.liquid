@@ -1,11 +1,12 @@
 <div class="price-range-container">
-  <!-- Hidden inputs -->
+  <!-- Hidden inputs for form submission -->
   <input
     type="hidden"
     name="{{ filter.min_value.param_name }}"
     id="{{ id_prefix }}{{ filter.label | escape }}-GTE-hidden"
     value="{% if filter.min_value.value %}{{ filter.min_value.value | money_without_currency }}{% else %}0{% endif %}"
   >
+
   <input
     type="hidden"
     name="{{ filter.max_value.param_name }}"
@@ -17,13 +18,15 @@
   <div class="slider-container">
     <span class="field-currency">{{ cart.currency.symbol }}</span>
     <span class="min-value-output">
-      {% if filter.min_value.value %}{{ filter.min_value.value | money_without_currency }}{% else %}0{% endif %}
+      {% if filter.min_value.value %}
+        {{ filter.min_value.value | money_without_currency }}
+      {% else %}
+        0
+      {% endif %}
     </span>
 
     <div class="range-slider">
-      <div class="range-track">
-        <div class="range-track-fill"></div>
-      </div>
+      <div class="range-track"></div>
       <input
         type="range"
         class="min-slider"
@@ -42,11 +45,11 @@
 
     <span class="field-currency">{{ cart.currency.symbol }}</span>
     <span class="max-value-output">
-      {% if filter.max_value.value -%}
-        {{- filter.max_value.value | money_without_currency -}}
-      {%- else -%}
-        {{- filter.range_max | money_without_currency -}}
-      {%- endif %}
+      {% if filter.max_value.value %}
+        {{ filter.max_value.value | money_without_currency }}
+      {% else %}
+        {{ filter.range_max | money_without_currency }}
+      {% endif %}
     </span>
   </div>
 </div>
@@ -54,7 +57,6 @@
 <style>
   .price-range-container {
     padding: 20px;
-    user-select: none;
   }
 
   .slider-container {
@@ -66,8 +68,7 @@
   .range-slider {
     position: relative;
     width: 200px;
-    height: 20px;
-    padding: 5px 0;
+    height: 10px;
   }
 
   .range-track {
@@ -78,14 +79,6 @@
     left: 0;
     right: 0;
     transform: translateY(-50%);
-    z-index: 1;
-  }
-
-  .range-track-fill {
-    position: absolute;
-    height: 100%;
-    background: #007bff;
-    z-index: 2;
   }
 
   input[type="range"] {
@@ -93,11 +86,10 @@
     width: 100%;
     margin: 0;
     padding: 0;
-    height: 20px;
+    height: 10px;
     background: transparent;
     pointer-events: none;
     -webkit-appearance: none;
-    z-index: 3;
   }
 
   input[type="range"]::-webkit-slider-thumb {
@@ -106,11 +98,8 @@
     height: 20px;
     border-radius: 50%;
     background: #007bff;
-    border: 2px solid #fff;
-    box-shadow: 0 0 2px rgba(0,0,0,0.3);
     cursor: pointer;
     -webkit-appearance: none;
-    transition: transform 0.2s;
   }
 
   input[type="range"]::-moz-range-thumb {
@@ -119,19 +108,7 @@
     height: 20px;
     border-radius: 50%;
     background: #007bff;
-    border: 2px solid #fff;
-    box-shadow: 0 0 2px rgba(0,0,0,0.3);
     cursor: pointer;
-    transition: transform 0.2s;
-  }
-
-  input[type="range"]:hover::-webkit-slider-thumb,
-  input[type="range"]:hover::-moz-range-thumb {
-    transform: scale(1.2);
-  }
-
-  input[type="range"]:focus {
-    outline: none;
   }
 
   .field-currency {
@@ -150,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const maxHidden = container.querySelector('#{{ id_prefix }}{{ filter.label | escape }}-LTE-hidden');
     const minOutput = container.querySelector('.min-value-output');
     const maxOutput = container.querySelector('.max-value-output');
-    const trackFill = container.querySelector('.range-track-fill');
     
     function updateValues() {
       let minValue = parseFloat(minSlider.value);
@@ -168,29 +144,19 @@ document.addEventListener('DOMContentLoaded', () => {
       minOutput.textContent = minValue;
       maxOutput.textContent = maxValue;
       
-      // Update track fill
+      // Update track highlight
       const minPercent = (minValue / parseFloat(maxSlider.max)) * 100;
       const maxPercent = (maxValue / parseFloat(maxSlider.max)) * 100;
-      trackFill.style.left = `${minPercent}%`;
-      trackFill.style.width = `${maxPercent - minPercent}%`;
+      const track = container.querySelector('.range-track');
+      track.style.background = `linear-gradient(to right, 
+        #ddd ${minPercent}%, 
+        #007bff ${minPercent}%, 
+        #007bff ${maxPercent}%, 
+        #ddd ${maxPercent}%)`;
     }
     
-    // Event listeners for both input and change to ensure updates
-    ['input', 'change'].forEach(event => {
-      minSlider.addEventListener(event, updateValues);
-      maxSlider.addEventListener(event, updateValues);
-    });
-    
-    // Hover enhancement
-    const sliders = [minSlider, maxSlider];
-    sliders.forEach(slider => {
-      slider.addEventListener('mouseenter', () => {
-        slider.style.zIndex = 4; // Bring to front when hovered
-      });
-      slider.addEventListener('mouseleave', () => {
-        slider.style.zIndex = 3; // Return to normal z-index
-      });
-    });
+    minSlider.addEventListener('input', updateValues);
+    maxSlider.addEventListener('input', updateValues);
     
     // Initial update
     updateValues();
