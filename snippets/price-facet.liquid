@@ -82,10 +82,13 @@
   </div>
   <div class="price-display">
     <span
-      >$<span id="minValue">{{ filter.min_value.value | money_without_currency }}</span></span
+      ><span id="minValue">
+        {{- filter.min_value.value | money_without_currency -}}
+        {{- shop.currency -}}
+      </span></span
     >
     <span
-      >$<span id="maxValue">{{ filter.max_value.value | money_without_currency }}</span></span
+      ><span id="maxValue">{{ filter.max_value.value | money_without_currency }}</span></span
     >
   </div>
 </div>
