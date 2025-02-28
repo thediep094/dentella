@@ -1,48 +1,17 @@
-<span class="field-currency">{{ cart.currency.symbol }}</span>
-
-<div class="field">
+<div class="price-range-container">
+  <!-- Hidden inputs -->
   <input
-    class="field__input"
+    type="hidden"
     name="{{ filter.min_value.param_name }}"
-    id="{{ id_prefix }}{{ filter.label | escape }}-GTE"
-    {%- if filter.min_value.value -%}
-      value="{{ filter.min_value.value | money_without_currency }}"
-    {%- endif -%}
-    type="text"
-    inputmode="decimal"
-    placeholder="0"
-    data-pattern="\d| |,|\."
-    data-min="0"
-    data-max="{{ filter.range_max | money_without_currency }}"
-
-  >a
-  <label class="field__label" for="{{ id_prefix }}{{ filter.label | escape }}-GTE">
-    {{- 'products.facets.from' | t -}}
-  </label>
-</div>
-
-{%- if filter_type != 'vertical' -%}
-  <span class="field-currency">{{ cart.currency.symbol }}</span>
-{%- endif -%}
-
-<div class="field">
-  <input
-    class="field__input"
-    name="{{ filter.max_value.param_name }}"
-    id="{{ id_prefix }}{{ filter.label | escape }}-LTE"
-    {%- if filter.max_value.value -%}
-      value="{{ filter.max_value.value | money_without_currency }}"
-    {%- endif -%}
-    type="text"
-    inputmode="decimal"
-    placeholder="{{ filter.range_max | money_without_currency }}"
-    data-pattern="\d| |,|\."
-    data-min="0"
-    data-max="{{ filter.range_max | money_without_currency }}"
+    id="{{ id_prefix }}{{ filter.label | escape }}-GTE-hidden"
+    value="{% if filter.min_value.value %}{{ filter.min_value.value | money_without_currency }}{% else %}0{% endif %}"
   >
-  <label class="field__label" for="{{ id_prefix }}{{ filter.label | escape }}-LTE">
-    {{- 'products.facets.to' | t -}}
-  </label>
+  <input
+    type="hidden"
+    name="{{ filter.max_value.param_name }}"
+    id="{{ id_prefix }}{{ filter.label | escape }}-LTE-hidden"
+    value="{% if filter.max_value.value %}{{ filter.max_value.value | money_without_currency }}{% else %}{{ filter.range_max | money_without_currency }}{% endif %}"
+  >
 
   <!-- Slider display -->
   <div class="slider-container">
@@ -81,3 +50,150 @@
     </span>
   </div>
 </div>
+
+<style>
+  .price-range-container {
+    padding: 20px;
+    user-select: none;
+  }
+
+  .slider-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .range-slider {
+    position: relative;
+    width: 200px;
+    height: 20px;
+    padding: 5px 0;
+  }
+
+  .range-track {
+    position: absolute;
+    height: 4px;
+    background: #ddd;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  .range-track-fill {
+    position: absolute;
+    height: 100%;
+    background: #007bff;
+    z-index: 2;
+  }
+
+  input[type="range"] {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 20px;
+    background: transparent;
+    pointer-events: none;
+    -webkit-appearance: none;
+    z-index: 3;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #007bff;
+    border: 2px solid #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,0.3);
+    cursor: pointer;
+    -webkit-appearance: none;
+    transition: transform 0.2s;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    pointer-events: all;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #007bff;
+    border: 2px solid #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  input[type="range"]:hover::-webkit-slider-thumb,
+  input[type="range"]:hover::-moz-range-thumb {
+    transform: scale(1.2);
+  }
+
+  input[type="range"]:focus {
+    outline: none;
+  }
+
+  .field-currency {
+    font-weight: bold;
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const containers = document.querySelectorAll('.price-range-container');
+  
+  containers.forEach(container => {
+    const minSlider = container.querySelector('.min-slider');
+    const maxSlider = container.querySelector('.max-slider');
+    const minHidden = container.querySelector('#{{ id_prefix }}{{ filter.label | escape }}-GTE-hidden');
+    const maxHidden = container.querySelector('#{{ id_prefix }}{{ filter.label | escape }}-LTE-hidden');
+    const minOutput = container.querySelector('.min-value-output');
+    const maxOutput = container.querySelector('.max-value-output');
+    const trackFill = container.querySelector('.range-track-fill');
+    
+    function updateValues() {
+      let minValue = parseFloat(minSlider.value);
+      let maxValue = parseFloat(maxSlider.value);
+      
+      // Ensure min doesn't exceed max
+      if (minValue > maxValue) {
+        minSlider.value = maxValue;
+        minValue = maxValue;
+      }
+      
+      // Update hidden inputs and display
+      minHidden.value = minValue;
+      maxHidden.value = maxValue;
+      minOutput.textContent = minValue;
+      maxOutput.textContent = maxValue;
+      
+      // Update track fill
+      const minPercent = (minValue / parseFloat(maxSlider.max)) * 100;
+      const maxPercent = (maxValue / parseFloat(maxSlider.max)) * 100;
+      trackFill.style.left = `${minPercent}%`;
+      trackFill.style.width = `${maxPercent - minPercent}%`;
+    }
+    
+    // Event listeners for both input and change to ensure updates
+    ['input', 'change'].forEach(event => {
+      minSlider.addEventListener(event, updateValues);
+      maxSlider.addEventListener(event, updateValues);
+    });
+    
+    // Hover enhancement
+    const sliders = [minSlider, maxSlider];
+    sliders.forEach(slider => {
+      slider.addEventListener('mouseenter', () => {
+        slider.style.zIndex = 4; // Bring to front when hovered
+      });
+      slider.addEventListener('mouseleave', () => {
+        slider.style.zIndex = 3; // Return to normal z-index
+      });
+    });
+    
+    // Initial update
+    updateValues();
+  });
+});
+</script>
