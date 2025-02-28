@@ -1269,7 +1269,7 @@ input.mobile-facets__checkbox {
   padding: 0 0.8rem 0 0;
 }
 
-.facets__color .mobile-facets__label{
+.facets__color .mobile-facets__list{
   padding: 1.5rem 0.8rem 0 0;
 }
 
@@ -1302,7 +1302,7 @@ width: 30px;
 }
 
 
-.facets__size .mobile-facets__label{
+.facets__size .mobile-facets__list{
   padding: 1.5rem 0.8rem 0 0;
 }
 
