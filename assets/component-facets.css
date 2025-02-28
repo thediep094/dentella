@@ -1253,3 +1253,12 @@ input.mobile-facets__checkbox {
     padding: 0 1rem 1rem;
   }
 }
+
+
+.facet-checkbox__text-label--color {
+      background: #00EEC9;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: block;
+}
