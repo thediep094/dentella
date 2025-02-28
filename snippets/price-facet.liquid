@@ -155,11 +155,11 @@
     const minValue = document.getElementById('minValue');
     const maxValue = document.getElementById('maxValue');
 
+      console.log(minValue, maxValue)
     function updateSlider() {
       let min = parseInt(minSlider.value);
       let max = parseInt(maxSlider.value);
 
-      console.log(min, max)
 
       // Đảm bảo min không vượt quá max và ngược lại
       if (min > max) {
