@@ -339,7 +339,10 @@ class PriceRange extends HTMLElement {
     if (minInput.value === '') minValue.textContent = 0
     if (maxInput.value === '')  maxValue.textContent = maxInput.getAttribute('data-max');
 
-    const minPercent = (minInput.value / maxInput.getAttribute('data-max')) * 100;
+    if (minInput.value === '' && maxInput.value === '') {
+       rangeTrack.style.left = `0%`;
+      rangeTrack.style.width = `100%`;
+    }
   
   }
 
