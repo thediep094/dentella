@@ -266,25 +266,25 @@
                                       disabled
                                     {% endif %}
                                   >
+                                  {% unless filter.param_name == 'filter.v.option.color' %}
+                                    {%- if presentation == 'image' -%}
+                                      <div class="facets__image-wrapper">
+                                        {%- if value.image -%}
+                                          {{
+                                            value.image
+                                            | image_url: width: 300
+                                            | image_tag: class: 'facets__image', alt: value.alt
+                                          }}
+                                        {%- endif -%}
+                                      </div>
+                                    {%- else -%}
+                                      {{- 'square.svg' | inline_asset_content -}}
 
-                                  {%- if presentation == 'image' -%}
-                                    <div class="facets__image-wrapper">
-                                      {%- if value.image -%}
-                                        {{
-                                          value.image
-                                          | image_url: width: 300
-                                          | image_tag: class: 'facets__image', alt: value.alt
-                                        }}
-                                      {%- endif -%}
-                                    </div>
-                                  {%- else -%}
-                                    {{- 'square.svg' | inline_asset_content -}}
-
-                                    <div class="svg-wrapper">
-                                      {{- 'icon-checkmark.svg' | inline_asset_content -}}
-                                    </div>
-                                  {%- endif -%}
-
+                                      <div class="svg-wrapper">
+                                        {{- 'icon-checkmark.svg' | inline_asset_content -}}
+                                      </div>
+                                    {%- endif -%}
+                                  {% endunless %}
                                   {{ text_value }}
                                 </label>
                               {%- endif -%}
