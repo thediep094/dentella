@@ -335,7 +335,7 @@ class PriceRange extends HTMLElement {
      if (maxInput.value) maxValue.textContent = maxInput.value;
     if (minInput.value) minValue.textContent = minInput.value;
     if (minInput.value === '') minValue.textContent = 0
-    if (maxInput.value === '')  maxValue.textContent = maxInput.getAttribute('data-max'));
+    if (maxInput.value === '')  maxValue.textContent = maxInput.getAttribute('data-max');
     
   }
 
