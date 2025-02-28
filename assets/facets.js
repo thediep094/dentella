@@ -327,6 +327,8 @@ class PriceRange extends HTMLElement {
     const maxInput = inputs[1];
     const minValue = document.getElementById('minValue');
     const maxValue = document.getElementById('maxValue');
+    const rangeTrack = document.getElementById('rangeTrack');
+    
     if (maxInput.value) minInput.setAttribute('data-max', maxInput.value);
     if (minInput.value) maxInput.setAttribute('data-min', minInput.value);
     if (minInput.value === '') maxInput.setAttribute('data-min', 0);
@@ -336,7 +338,11 @@ class PriceRange extends HTMLElement {
     if (minInput.value) minValue.textContent = minInput.value;
     if (minInput.value === '') minValue.textContent = 0
     if (maxInput.value === '')  maxValue.textContent = maxInput.getAttribute('data-max');
-    
+
+    const minPercent = (min / maxInput.getAttribute('data-max')) * 100;
+    const maxPercent = (max / maxInput.getAttribute('data-max')) * 100;
+    rangeTrack.style.left = `${minPercent}%`;
+    rangeTrack.style.width = `${maxPercent - minPercent}%`;
   }
 
   adjustToValidValues(input) {
