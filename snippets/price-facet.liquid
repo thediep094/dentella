@@ -160,8 +160,8 @@
       }
 
       // Cập nhật vị trí và chiều rộng của range track
-      const minPercent = (min / 1000) * 100;
-      const maxPercent = (max / 1000) * 100;
+      const minPercent = (min / {{ filter.range_max | money_without_currency }}) * 100;
+      const maxPercent = (max / {{ filter.range_max | money_without_currency }}) * 100;
       rangeTrack.style.left = `${minPercent}%`;
       rangeTrack.style.width = `${maxPercent - minPercent}%`;
 
