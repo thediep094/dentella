@@ -46,58 +46,40 @@
     </label>
   </div>
 {% endcomment %}
-<div class="range-wrap">
-  <input
-    class="range"
-    name="{{ filter.min_value.param_name }}"
-    id="Filter-{{ filter.label | escape }}-GTE"
-    {% if filter.min_value.value %}
-      value="
-        {%- if uses_comma_decimals -%}
-        {{ filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '' }}
-        {% else %}
-        {{ filter.min_value.value | money_without_currency | replace: ',', '' }}
-        {% endif %}
-      "
-    {% else %}
-      value="0"
+<div class="slider-container">
+  <div class="range-slider">
+    <div class="range-track" id="rangeTrack"></div>
+    <input
+      type="range"
+      name="{{ filter.min_value.param_name }}"
+      class="min-slider"
+      id="{{ id_prefix }}{{ filter.label | escape }}-GTE"
       min="0"
-      step="0.5"
-      max="
-        {%- if uses_comma_decimals -%}
-        {{ filter.range_max | divided_by: 2 | money_without_currency | replace: '.', '' | replace: ',', '' }}
-        {% else %}
-        {{ filter.range_max | divided_by: 2 | money_without_currency | replace: ',', '' }}
-        {% endif %}
-      "
-    {% endif %}
-    type="range"
-  >
-  <output class="bubble"></output>
-</div>
-<div class="range-wrap">
-  <input
-    class="range"
-    name="{{ filter.max_value.param_name }}"
-    id="Filter-{{ filter.label | escape }}-LTE"
-    step="0.5"
-    {% if filter.max_value.value %}
-      value="
-        {%- if uses_comma_decimals -%}
-        {{ filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '' }}
-        {% else %}
-        {{ filter.max_value.value | money_without_currency | replace: ',', '' }}
-        {% endif %}
-      "
-    {% else %}
-      value="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-      min="{{ filter.range_max | divided_by: 2 | money_without_currency | replace: ',', '' }}"
-    {% endif %}
-    value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"
-    type="range"
-    max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-  >
-  <output class="bubble"></output>
+      max="{{ filter.range_max | money_without_currency }}"
+      {%- if filter.min_value.value -%}
+        value="{{ filter.min_value.value | money_without_currency }}"
+      {%- endif -%}
+    >
+    <input
+      type="range"
+      name="{{ filter.max_value.param_name }}"
+      class="max-slider"
+      id="{{ id_prefix }}{{ filter.label | escape }}-LTE"
+      min="0"
+      max="{{ filter.range_max | money_without_currency }}"
+      {%- if filter.max_value.value -%}
+        value="{{ filter.max_value.value | money_without_currency }}"
+      {%- endif -%}
+    >
+  </div>
+  <div class="price-display">
+    <span
+      >$<span id="minValue">{{ filter.min_value.value | money_without_currency }}</span></span
+    >
+    <span
+      >$<span id="maxValue">{{ filter.max_value.value | money_without_currency }}</span></span
+    >
+  </div>
 </div>
 <style>
   .slider-container {
