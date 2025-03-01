@@ -321,7 +321,15 @@
     {% if template == 'index' %}
       {% render 'scroll-down-button' %}
     {% endif %}
-
+      <!-- Modal Structure -->
+      <div id="sizeModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <div id="modalBody">
+            <!-- Dynamic content will be injected here -->
+          </div>
+        </div>
+      </div>
     {% sections 'footer-group' %}
 
     <ul hidden>

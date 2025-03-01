@@ -1,0 +1,139 @@
+{% comment %}
+
+  Accepts:
+  - product: {Object} product object.
+  - block: {Object} block object.
+
+
+  Usage:
+  {% render 'size-guide',
+    product: product,
+    block: block
+  %}
+{% endcomment %}
+
+{{ 'component-size-guide.css' |  asset_url |  stylesheet_tag }}
+
+<div class="size-guide button button--secondary"  id="openModal" >
+    Size Guide
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("sizeModal")
+  const openBtn = document.getElementById("openModal")
+  const closeBtn = document.querySelector(".close-btn")
+  const modalBody = document.getElementById("modalBody")
+  
+
+
+ const sizeXS = {{ product.metafields.custom.size_xs }}
+ const sizeS = {{ product.metafields.custom.size_s }}
+ const sizeM = {{ product.metafields.custom.size_m }}
+ const sizeL = {{ product.metafields.custom.size_l }}
+
+
+ const sizeUK = {{ product.metafields.custom.size_uk }}
+ const sizeEU = {{ product.metafields.custom.size_eu }}
+ const sizeUS = {{ product.metafields.custom.size_us }}
+
+  // Example: Size Guide Data
+  const sizeGuideHTML = `
+  <h2 class="modal-title">WOMENSWEAR SIZE GUIDE</h2>
+
+    <div class="size-guide-table">
+      <!-- Size Guide Table -->
+      <table class="size-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th data-label="EU Sizes"></th>
+            <th data-label="UK Sizes"></th>
+            <th data-label="Bust"></th>
+            <th data-label="Waist"></th>
+            <th data-label="Hips"></th>
+          </tr>
+        </thead>
+        <tbody class="size-chart">
+           <tr>
+                <th rowspan="2">XS</th>
+                ${ sizeXS ? sizeXS.map((size, index) => index < 5 ? `<td style="${index == 0 ? 'border-left: none' : ''}">${size}</td>` : "").join("") : ''}
+            </tr>
+            <tr>
+                ${sizeXS ? sizeXS.map((size, index) => index >= 5 ? `<td style="${index == 5 ? 'border-left: none' : ''}">${size}</td>` : "").join("") : ''}
+            </tr>
+
+            <tr>
+                <th rowspan="2">S</th>
+                ${ sizeS ? sizeS.map((size, index) => index < 5 ? `<td style="${index == 0 ? 'border-left: none' : ''}">${size}</td>` : "").join("") : ''}
+            </tr>
+            <tr>
+                ${sizeS ? sizeS.map((size, index) => index >= 5 ? `<td style="${index == 5 ? 'border-left: none' : ''}">${size}</td>` : "").join("") : ''}
+            </tr>
+
+            <tr>
+                <th rowspan="2">M</th>
+                ${ sizeM ? sizeM.map((size, index) => index < 5 ? `<td style="${index == 0 ? 'border-left: none' : ''}">${size}</td>` : "").join("") : ''}
+            </tr>
+            <tr>
+                ${sizeM ? sizeM.map((size, index) => index >= 5 ? `<td style="${index == 5 ? 'border-left: none' : ''}">${size}</td>` : "").join("") : ''}
+            </tr>
+
+            <tr>
+                <th rowspan="2" style="border-bottom: none;">L</th>
+                ${ sizeL ? sizeL.map((size, index) => index < 5 ? `<td style="${index == 0 ? 'border-left: none' : ''}">${size}</td>` : "").join("") : ''}
+            </tr>
+            <tr>
+                ${sizeL ? sizeL.map((size, index) => index >= 5 ? `<td style="${index == 5 ? 'border-left: none' : ''}">${size}</td>` : "").join("") : ''}
+            </tr>
+       
+        </tbody>
+      </table>
+
+      <!-- Illustration -->
+      <div class="size-illustration">
+        <img src="{{ 'image-guide.png' | asset_url }}" alt="Size Guide Illustration">
+      </div>
+    </div>
+
+    <!-- Footwear Size Guide -->
+    <h2 class="modal-title">FOOTWEAR SIZE GUIDE</h2>
+    <table class="size-table footwear">
+  
+      <tbody>
+        <tr>
+        <td>UK</td>
+        ${ sizeUK ? sizeUK.map(size => `<td>${size}</td>`).join("") : ''}
+        </tr>
+        <tr>
+        <td>EU</td>
+        ${ sizeEU ? sizeEU.map(size => `<td>${size}</td>`).join("") : ''}
+        </tr>
+        <tr>
+          <td>US</td>
+         ${ sizeUS ? sizeUS.map(size => `<td>${size}</td>`).join("") : ''}
+        </tr>
+      </tbody>
+    </table>
+  `;
+
+  // Function to Open Modal
+  openBtn.addEventListener("click", function () {
+    modalBody.innerHTML = sizeGuideHTML; // Inject content
+    modal.style.display = "flex";
+  });
+
+  // Function to Close Modal
+  closeBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  // Close when clicking outside content
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+
+</script>

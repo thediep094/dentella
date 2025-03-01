@@ -122,7 +122,7 @@
               {%- when 'collection' -%}
                 <div class="product__collection">
                   <a href="{{ product.collections.first.url }}" class="product__collection">
-                    {{ product.collections.first.title }}
+                    {{- product.collections.first.title -}}
                   </a>
                   {% if block.settings.show_badge %} 
                     {%- liquid 
@@ -173,6 +173,8 @@
                     {{ form | payment_terms }}
                   {%- endform -%}
                 </div>
+              {%- when 'size_guide' -%}
+                {% render 'size-guide', product: product, block: block %}
               {%- when 'inventory' -%}
                 <p
                   class="product__inventory{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
@@ -589,6 +591,11 @@
     {
       "type": "title",
       "name": "t:sections.main-product.blocks.title.name",
+      "limit": 1
+    },
+    {
+      "type": "size_guide",
+      "name": "Size Guide",
       "limit": 1
     },
     {
