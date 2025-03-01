@@ -522,6 +522,12 @@ table:not([class]) th {
   }
 }
 
+@media screen and (max-width: 990px) {
+  .small-big-hide {
+    display: none !important;
+  }
+}
+
 @media screen and (min-width: 750px) and (max-width: 989px) {
   .medium-hide {
     display: none !important;
@@ -3068,18 +3074,37 @@ details-disclosure > details {
 }
 
 .badge {
-  border: 1px solid transparent;
+  width: 9.4rem;
+  height: 9.1rem;
   border-radius: var(--badge-corner-radius);
-  display: inline-block;
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   line-height: 1;
   padding: 0.5rem 1.3rem 0.6rem 1.3rem;
   text-align: center;
   background-color: rgb(var(--color-badge-background));
-  border-color: rgba(var(--color-badge-border), var(--alpha-badge-border));
   color: rgb(var(--color-badge-foreground));
   word-break: break-word;
+  position: relative;
+}
+
+.badge span:first-child {
+  width: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 1.7rem;
+  height: calc(100% + 24px);
+  color: rgb(var(--color-badge-background));
+  background-color: rgb(var(--color-badge-foreground));
+  border-radius: 5px;
+  top: -8px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%);
 }
 
 .gradient {
