@@ -185,6 +185,8 @@ if (!customElements.get('product-info')) {
             }
           };
 
+          updateSourceFromDestination('thumbnail-main');
+          updateSourceFromDestination('image-main');
           updateSourceFromDestination('badge-main');
           updateSourceFromDestination('price');
           updateSourceFromDestination('Sku', ({ classList }) => classList.contains('hidden'));
