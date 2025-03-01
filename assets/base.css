@@ -3090,9 +3090,10 @@ details-disclosure > details {
   position: relative;
 }
 
-.badge span:first-child {
+.badge .badge__content {
   width: 7rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -3105,6 +3106,14 @@ details-disclosure > details {
   left: 50%;
   transform: translate(-50%, 0);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%);
+}
+
+.badge .badge__content span:first-child {
+  font-size: 2rem;
+}
+
+.badge .badge__content span:last-child {
+  font-size: 1.1rem;
 }
 
 .gradient {
@@ -3846,10 +3855,11 @@ details-disclosure > details {
 }
 
 .product-card-wrapper:hover .card__quick-add {
-  transform: translateY(0);
+  /* transform: translateY(0); */
   opacity: 1;
   pointer-events: all;
   visibility: visible;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .card__quick-add {
@@ -3859,7 +3869,8 @@ details-disclosure > details {
   right: 0;
   z-index: 2;
   transition: 0.3s;
-  transform: translateY(40px);
+  /* transform: translateY(40px); */
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
