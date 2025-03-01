@@ -1,0 +1,100 @@
+{{ 'component-product-new-media.css' |  asset_url |  stylesheet_tag }}
+
+<div class="product-media-new-gallery">
+  <!-- Thumbnail Slider (Left) -->
+  <div class="swiper thumbnail-swiper">
+    <div class="swiper-wrapper">
+      {% for media in product.media %}
+        <div class="swiper-slide">
+          <img src="{{ media.preview_image | image_url: width: 1024 }}" width="auto" height="auto" alt="{{ media.alt | escape }}" class="thumbnail-image" data-index="{{ forloop.index0 }}">
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Main Image Slider (Right) -->
+  <div class="swiper main-swiper">
+    <div class="swiper-wrapper">
+      {% for media in product.media %}
+        <div class="swiper-slide">
+          <img src="{{ media.preview_image | image_url: width: 1024  }}" width="auto" height="auto" alt="{{ media.alt | escape }}">
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- Swiper.js Initialization -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    function initSwipers() {
+      let isMobile = window.innerWidth < 768;
+
+      const thumbnailSwiper = new Swiper(".thumbnail-swiper", {
+        direction: isMobile ? "horizontal" : "vertical", // Switch direction based on screen size
+        slidesPerView: "auto",
+        spaceBetween: 14,
+        watchSlidesProgress: true,
+      });
+
+      const mainSwiper = new Swiper(".main-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        thumbs: {
+          swiper: thumbnailSwiper,
+        },
+      });
+
+      return { thumbnailSwiper, mainSwiper };
+    }
+
+    let swipers = initSwipers();
+
+    // Reinitialize Swipers on Resize
+    window.addEventListener("resize", function () {
+      if ((window.innerWidth < 768 && swipers.thumbnailSwiper.params.direction !== "horizontal") || 
+          (window.innerWidth >= 768 && swipers.thumbnailSwiper.params.direction !== "vertical")) {
+        swipers.thumbnailSwiper.destroy(true, true);
+        swipers.mainSwiper.destroy(true, true);
+        swipers = initSwipers();
+      }
+    });
+  });
+
+  if(Shopify.designMode) {
+
+      function initSwipers() {
+        let isMobile = window.innerWidth < 768;
+  
+        const thumbnailSwiper = new Swiper(".thumbnail-swiper", {
+          direction: isMobile ? "horizontal" : "vertical", // Switch direction based on screen size
+          slidesPerView: "auto",
+          spaceBetween: 14,
+          watchSlidesProgress: true,
+        });
+  
+        const mainSwiper = new Swiper(".main-swiper", {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          thumbs: {
+            swiper: thumbnailSwiper,
+          },
+        });
+  
+        return { thumbnailSwiper, mainSwiper };
+      }
+  
+      let swipers = initSwipers();
+  
+      // Reinitialize Swipers on Resize
+      window.addEventListener("resize", function () {
+        if ((window.innerWidth < 768 && swipers.thumbnailSwiper.params.direction !== "horizontal") || 
+            (window.innerWidth >= 768 && swipers.thumbnailSwiper.params.direction !== "vertical")) {
+          swipers.thumbnailSwiper.destroy(true, true);
+          swipers.mainSwiper.destroy(true, true);
+          swipers = initSwipers();
+        }
+      });
+  }
+ 
+</script>

@@ -1,0 +1,88 @@
+{% comment %} 
+    {% render 'annoucement', richtext: block.settings.richtext, icon: block.settings.icon %} 
+{% endcomment %}
+{{ 'section-annoucement-bar-custom.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+  
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endstyle -%}
+<div class="section-{{ section.id }}-padding page-width">
+
+    <div class="color-{{ section.settings.section_color_scheme }} annoucement-custom ">
+
+        {{ section.settings.title }}
+        {% if section.settings.icon != blank %}
+          <img
+            src="{{ section.settings.icon |  image_url: width: 50 }}"
+            width="auto"
+            height="auto"
+            style="object-fit: contain;">
+        {% endif %}
+    </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Annoucement Bar Custom",
+    "settings": [
+      {
+        "type": "color_scheme",
+        "id": "section_color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "scheme-1"
+      },
+
+        {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon",
+            "info": "Icon size should be 50x50",
+        },
+      {
+        "type": "richtext",
+        "id": "title",
+        "default": "<p>Shop now and  get a <b>Free delivery</b> all over Doha above 6 meals</p>",
+        "label": "Title"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "Annoucement Bar Custom"
+      }
+    ]
+  }
+{% endschema %}

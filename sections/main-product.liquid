@@ -76,7 +76,11 @@
   <div class="page-width">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
+        {% if section.settings.gallery_layout != 'thumbnail' and section.settings.gallery_layout != 'thumbnail_slider' %}
         {% render 'product-media-gallery', variant_images: variant_images %}
+        {%else%}
+        {% render 'product-new-media', variant_images: variant_images %}
+        {%endif%}
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <section
@@ -98,22 +102,51 @@
                 </p>
               {%- when 'title' -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
-                  <h1>{{ product.title | escape }}</h1>
+                  <div class="product__title-wrapper">
+                    <h1>{{ product.title | escape }}</h1>
+                    <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                      {%- render 'price',
+                        product: product,
+                        use_variant: true,
+                        show_badges: false,
+                        price_class: 'price--large'
+                      -%}
+                    </div> 
+                  </div>
                   <a href="{{ product.url }}" class="product__title">
                     <h2 class="h1">
                       {{ product.title | escape }}
                     </h2>
                   </a>
                 </div>
-              {%- when 'price' -%}
-                <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+              {%- when 'collection' -%}
+                <div class="product__collection">
+                  <a href="{{ product.collections.first.url }}" class="product__collection">
+                    {{ product.collections.first.title }}
+                  </a>
+                  {% if block.settings.show_badge %} 
+                    {%- liquid 
+                    assign target_product = product.selected_or_first_available_variant
+                    assign available = target_product.available | default: false
+                    -%}
+                  <span id="badge-main-{{ section.id }}" class="product__badge">
+                    {% if available %}
+                      In Stock
+                      {% else  %}
+                      {{ 'products.product.sold_out' | t }}
+                    {%endif%}
+                  </span>
+                  {%endif%}
+
+                </div>
+                {% comment %} <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
                     product: product,
                     use_variant: true,
                     show_badges: true,
                     price_class: 'price--large'
                   -%}
-                </div>
+                </div>  {% endcomment %}
                 {%- if product.quantity_price_breaks_configured? -%}
                   <div class="volume-pricing-note" id="Volume-Note-{{ section.id }}">
                     <span>{{ 'products.product.volume_pricing.note' | t }}</span>
@@ -771,9 +804,17 @@
       "limit": 1
     },
     {
-      "type": "price",
-      "name": "t:sections.main-product.blocks.price.name",
-      "limit": 1
+      "type": "collection",
+      "name": "Collection",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_badge",
+          "label": "Show badge",
+          "default": true
+        }
+      ]
     },
     {
       "type": "sku",
