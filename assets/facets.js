@@ -325,22 +325,29 @@ class PriceRange extends HTMLElement {
     const inputs = this.querySelectorAll('input');
     const minInput = inputs[0];
     const maxInput = inputs[1];
-    const minValue = document.getElementById('minValue');
-    const maxValue = document.getElementById('maxValue');
-    const rangeTrack = document.getElementById('rangeTrack');
+  
     
     if (maxInput.value) minInput.setAttribute('data-max', maxInput.value);
     if (minInput.value) maxInput.setAttribute('data-min', minInput.value);
     if (minInput.value === '') maxInput.setAttribute('data-min', 0);
     if (maxInput.value === '') minInput.setAttribute('data-max', maxInput.getAttribute('data-max'));
 
-     if (maxInput.value) maxValue.textContent = maxInput.value;
-    if (minInput.value) minValue.textContent = minInput.value;
-    if (minInput.value === '') minValue.textContent = 0
-    if (maxInput.value === '')  maxValue.textContent = maxInput.getAttribute('data-max');
+    document.querySelectorAll('.slider-container').forEach((container) => {
+      const rangeTrack = container.querySelector('.range-track');
+      const minValue = container.querySelector('#minValue');
+      const maxValue = container.querySelector('#maxValue');
+      
+      if (maxInput.value) maxValue.textContent = maxInput.value;
+     if (minInput.value) minValue.textContent = minInput.value;
+     if (minInput.value === '') minValue.textContent = 0
+     if (maxInput.value === '')  maxValue.textContent = maxInput.getAttribute('data-max');
+     
+       rangeTrack.style.left = `${(minInput.value / maxInput.getAttribute('data-max')) * 100}%`;
+       rangeTrack.style.width = `${(maxInput.value / maxInput.getAttribute('data-max')) * 100}%`;
+    })
+
     
-      rangeTrack.style.left = `${(minInput.value / maxInput.getAttribute('data-max')) * 100}%`;
-      rangeTrack.style.width = `${(maxInput.value / maxInput.getAttribute('data-max')) * 100}%`;
+
     
   
   }
@@ -349,6 +356,7 @@ class PriceRange extends HTMLElement {
     const value = Number(input.value);
     const min = Number(input.getAttribute('data-min'));
     const max = Number(input.getAttribute('data-max'));
+    
 
     if (value < min) input.value = min;
     if (value > max) input.value = max;

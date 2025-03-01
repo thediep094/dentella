@@ -2,6 +2,7 @@
   --ratio-percent: 56.25%;
   min-height: 50vh;
   position: relative;
+  max-height: 100vh;
   padding-bottom: calc(var(--ratio-percent) - var(--media-border-width));
 }
 
@@ -47,6 +48,7 @@
 
 .video-section__media.media-fit-cover video {
   object-fit: cover;
+  max-height: 100vh;
 }
 
 .video-section {

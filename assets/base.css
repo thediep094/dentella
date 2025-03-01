@@ -3839,3 +3839,7 @@ details-disclosure > details {
   pointer-events: none;
   visibility: hidden;
 }
+
+#product-grid {
+  margin-top: 1rem;
+}

@@ -153,44 +153,50 @@
   }
 </style>
 <script>
-   document.addEventListener('DOMContentLoaded', function () {
-     
-    const minSlider = document.getElementById('{{ id_prefix }}{{ filter.label | escape }}-GTE');
-    const maxSlider = document.getElementById('{{ id_prefix }}{{ filter.label | escape }}-LTE');
-    const rangeTrack = document.getElementById('rangeTrack');
-    const minValue = document.getElementById('minValue');
-    const maxValue = document.getElementById('maxValue');
+  document.addEventListener('DOMContentLoaded', function () {
+  function initializeSliders() {
+    document.querySelectorAll('.slider-container').forEach((container) => {
+      const minSlider = container.querySelector('.min-slider');
+      const maxSlider = container.querySelector('.max-slider');
+      const rangeTrack = container.querySelector('.range-track');
+      const minValue = container.querySelector('#minValue');
+      const maxValue = container.querySelector('#maxValue');
 
-    function updateSlider() {
-      let min = parseInt(minSlider.value);
-      let max = parseInt(maxSlider.value);
+      function updateSlider() {
+        let min = parseInt(minSlider.value);
+        let max = parseInt(maxSlider.value);
 
+        if (min > max) {
+          minSlider.value = max;
+          min = max;
+        }
+        if (max < min) {
+          maxSlider.value = min;
+          max = min;
+        }
 
-      // Đảm bảo min không vượt quá max và ngược lại
-      if (min > max) {
-        minSlider.value = max;
-        min = max;
+        const minPercent = (min / parseInt(minSlider.getAttribute('data-max'))) * 100;
+        const maxPercent = (max / parseInt(maxSlider.getAttribute('data-max'))) * 100;
+
+        rangeTrack.style.left = `${minPercent}%`;
+        rangeTrack.style.width = `${maxPercent - minPercent}%`;
+
+        minValue.textContent = min;
+        maxValue.textContent = max;
       }
-      if (max < min) {
-        maxSlider.value = min;
-        max = min;
-      }
 
-      // Cập nhật vị trí và chiều rộng của range track
-      const minPercent = (min / {{ filter.range_max | money_without_currency }}) * 100;
-      const maxPercent = (max / {{ filter.range_max | money_without_currency }}) * 100;
-      rangeTrack.style.left = `${minPercent}%`;
-      rangeTrack.style.width = `${maxPercent - minPercent}%`;
+      minSlider.addEventListener('input', updateSlider);
+      maxSlider.addEventListener('input', updateSlider);
 
-      // Cập nhật giá trị hiển thị
-      minValue.textContent = min;
-      maxValue.textContent = max;
-    }
+      updateSlider();
+    });
+  }
 
-    minSlider.addEventListener('input', updateSlider);
-    maxSlider.addEventListener('input', updateSlider);
+  initializeSliders();
 
-    // Gọi lần đầu để khởi tạo
-    updateSlider();
-   })
+  // Handle re-renders by using Shopify event listeners (for dynamic updates)
+  document.addEventListener('shopify:section:load', initializeSliders);
+  document.addEventListener('shopify:section:reorder', initializeSliders);
+});
+
 </script>
