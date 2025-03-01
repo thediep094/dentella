@@ -553,15 +553,13 @@
   height: 1.7rem;
 }
 
-.facet-checkbox
-  > input[type="checkbox"]:checked
-  ~ .svg-wrapper
-  > .icon-checkmark,
-.mobile-facets__label
-  > input[type="checkbox"]:checked
-  ~ .svg-wrapper
-  > .icon-checkmark {
-  visibility: visible;
+.icon-square {
+  color: rgb(var(--color-button-text));
+}
+
+.facet-checkbox > input[type="checkbox"]:checked ~ .icon-square,
+.mobile-facets__label > input[type="checkbox"]:checked ~ .icon-square {
+  color: rgb(var(--color-button));
 }
 
 @media screen and (forced-colors: active) {
