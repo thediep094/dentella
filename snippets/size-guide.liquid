@@ -49,14 +49,14 @@
             <th></th>
             <th data-label="EU Sizes"></th>
             <th data-label="UK Sizes"></th>
-            <th data-label="Bust"></th>
-            <th data-label="Waist"></th>
-            <th data-label="Hips"></th>
+            <th data-label="Bust" data-symbol="A"></th>
+            <th data-label="Waist" data-symbol="B"></th>
+            <th data-label="Hips" data-symbol="C"></th>
           </tr>
         </thead>
         <tbody class="size-chart">
            <tr>
-                <th rowspan="2">XS</th>
+                <th rowspan="2" class="size-chart-row-title">XS</th>
                 ${ sizeXS ? sizeXS.map((size, index) => index < 5 ? `<td style="${index == 0 ? 'border-left: none' : ''}">${size}</td>` : "").join("") : ''}
             </tr>
             <tr>
@@ -64,7 +64,7 @@
             </tr>
 
             <tr>
-                <th rowspan="2">S</th>
+                <th rowspan="2" class="size-chart-row-title">S</th>
                 ${ sizeS ? sizeS.map((size, index) => index < 5 ? `<td style="${index == 0 ? 'border-left: none' : ''}">${size}</td>` : "").join("") : ''}
             </tr>
             <tr>
@@ -72,7 +72,7 @@
             </tr>
 
             <tr>
-                <th rowspan="2">M</th>
+                <th rowspan="2" class="size-chart-row-title">M</th>
                 ${ sizeM ? sizeM.map((size, index) => index < 5 ? `<td style="${index == 0 ? 'border-left: none' : ''}">${size}</td>` : "").join("") : ''}
             </tr>
             <tr>
@@ -80,7 +80,7 @@
             </tr>
 
             <tr>
-                <th rowspan="2" style="border-bottom: none;">L</th>
+                <th rowspan="2" style="border-bottom: none;" class="size-chart-row-title">L</th>
                 ${ sizeL ? sizeL.map((size, index) => index < 5 ? `<td style="${index == 0 ? 'border-left: none' : ''}">${size}</td>` : "").join("") : ''}
             </tr>
             <tr>
@@ -101,15 +101,15 @@
     <table class="size-table footwear">
   
       <tbody>
-        <tr>
+        <tr class="size-table--row-1">
         <td>UK</td>
         ${ sizeUK ? sizeUK.map(size => `<td>${size}</td>`).join("") : ''}
         </tr>
-        <tr>
+        <tr class="size-table--row-2">
         <td>EU</td>
         ${ sizeEU ? sizeEU.map(size => `<td>${size}</td>`).join("") : ''}
         </tr>
-        <tr>
+        <tr class="size-table--row-3">
           <td>US</td>
          ${ sizeUS ? sizeUS.map(size => `<td>${size}</td>`).join("") : ''}
         </tr>

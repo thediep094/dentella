@@ -390,7 +390,7 @@
           "settings": {
             "text": "The Ultimate Luxury Experience",
             "text_style": "body",
-            "margin_top": 35
+            "margin_top": 0
           }
         },
         "buttons_kJpGk4": {
@@ -402,7 +402,7 @@
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false,
-            "margin_top": 35
+            "margin_top": 10
           }
         }
       },
@@ -413,7 +413,7 @@
       ],
       "settings": {
         "page_width": false,
-        "image": "shopify://shop_images/Group_22118.png",
+        "image": "shopify://shop_images/Group_22121_6e3ca388-ce31-44d2-94e6-660158555483.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "top-right",
