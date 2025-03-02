@@ -1,19 +1,125 @@
-{
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
   "sections": {
+    "image_banner_HbY3mr": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_yNCXPt": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Blog",
+            "heading_size": "h1"
+          }
+        },
+        "text_wUreMN": {
+          "type": "text",
+          "settings": {
+            "text": "Sed risus ultricies tristique nulla aliquet enim tortor at. Leo in vitae turpis massa sed. Quis blandit turpis cursus in hac habitasse platea.",
+            "text_style": "body",
+            "margin_top": 35
+          }
+        }
+      },
+      "block_order": [
+        "heading_yNCXPt",
+        "text_wUreMN"
+      ],
+      "settings": {
+        "page_width": false,
+        "image": "shopify://shop_images/elegant-silk-fabric-decoration.png",
+        "image_overlay_opacity": 30,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "main": {
       "type": "main-blog",
       "settings": {
-        "layout": "collage",
+        "color_scheme": "scheme-4",
+        "go_top": 100,
+        "layout": "grid",
         "show_image": true,
-        "image_height": "medium",
+        "image_height": "large",
         "show_date": true,
-        "show_author": false,
+        "show_author": true,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_LkWi4K": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_FHYMTJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "THE VIP BOX",
+            "heading_size": "h1"
+          }
+        },
+        "text_3LFHrK": {
+          "type": "text",
+          "settings": {
+            "text": "The Ultimate Luxury Experience",
+            "text_style": "body",
+            "margin_top": 0
+          }
+        },
+        "buttons_kJpGk4": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Contact Us",
+            "button_link_1": "shopify://pages/contact",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "margin_top": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_FHYMTJ",
+        "text_3LFHrK",
+        "buttons_kJpGk4"
+      ],
+      "settings": {
+        "page_width": false,
+        "image": "shopify://shop_images/Group_22121_6e3ca388-ce31-44d2-94e6-660158555483.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "top-right",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
-    "main"
+    "image_banner_HbY3mr",
+    "main",
+    "image_banner_LkWi4K"
   ]
 }
