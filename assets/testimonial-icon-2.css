@@ -1,33 +1,33 @@
-.testimonial-icon .banner__box{
+.testimonial-icon-2 .banner__box{
   max-width: unset !important;
   overflow: hidden;
 }
 
-.testimonial-icon-swiper__wrapper {
+.testimonial-icon-2-swiper__wrapper {
       padding-top: 2rem;
 }
 
 
-.testimonial-icon-item--img {
+.testimonial-icon-2-item--img {
  width: 6rem;
     object-fit: contain;
   position: relative;
 }
 
-.testimonial-icon-swiper-item {
+.testimonial-icon-2-swiper-item {
   display: flex;
   flex-direction: column;
   width: fit-content;
 }
 
-.testimonial-icon-swiper__wrapper-center {
+.testimonial-icon-2-swiper__wrapper-center {
   display: flex;
   justify-content: center;
 
 }
 
 @media screen and (min-width: 768px) {
-  .testimonial-icon-item--img-wrapper {
+  .testimonial-icon-2-item--img-wrapper {
   width: 7rem;
   height: 7rem;
   margin: 0 6rem;
