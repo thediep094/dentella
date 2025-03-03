@@ -49,3 +49,46 @@
     </div>
   </details>
 </share-button>
+
+<!-- Social Share Buttons -->
+      <div class="social-share-buttons" style="margin-top: 10px;">
+        <!-- Facebook Share Button -->
+        <a 
+          href="https://www.facebook.com/sharer/sharer.php?u={{ share_link | url_encode }}" 
+          target="_blank" 
+          class="share-button__facebook"
+          style="text-decoration: none; margin-right: 10px;"
+        >
+          <span class="svg-wrapper">
+            <!-- Assuming you have a Facebook icon file -->
+            {{- 'icon-facebook.svg' | inline_asset_content -}}
+          </span>
+          <span class="visually-hidden">{{ 'general.share.share_facebook' | t | default: 'Share on Facebook' }}</span>
+        </a>
+        <!-- Messenger Share Button -->
+        <a 
+          href="fb-messenger://share?link={{ share_link | url_encode }}" 
+          target="_blank" 
+          class="share-button__messenger"
+          style="text-decoration: none; margin-right: 10px;"
+        >
+          <span class="svg-wrapper">
+            <!-- Assuming you have a Messenger icon file -->
+            {{- 'icon-messenger.svg' | inline_asset_content -}}
+          </span>
+          <span class="visually-hidden">{{ 'general.share.share_messenger' | t | default: 'Share on Messenger' }}</span>
+        </a>
+        <!-- Email Share Button -->
+        <a 
+          href="mailto:?subject={{ 'general.share.email_subject' | t | default: 'Check this out' }}&body={{ share_link | url_encode }}" 
+          class="share-button__email"
+          style="text-decoration: none;"
+        >
+          <span class="svg-wrapper">
+            <!-- Assuming you have an Email icon file -->
+            {{- 'icon-email.svg' | inline_asset_content -}}
+          </span>
+          <span class="visually-hidden">{{ 'general.share.share_email' | t | default: 'Share via Email' }}</span>
+        </a>
+      </div>
+    </div>
