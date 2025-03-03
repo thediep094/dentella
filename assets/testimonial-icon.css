@@ -1,5 +1,5 @@
 .testimonial-icon .banner__box{
-  max-width: unset;
+  max-width: unset !important;
   overflow: hidden;
 }
 
