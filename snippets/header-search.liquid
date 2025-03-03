@@ -19,13 +19,13 @@
         <span class="svg-wrapper">
           {{- 'icon-search.svg' | inline_asset_content -}}
         </span>
-        <span class="svg-wrapper header__icon-close">
+        {% comment %} <span class="svg-wrapper header__icon-close">
           {{- 'icon-close.svg' | inline_asset_content -}}
-        </span>
+        </span> {% endcomment %}
       </span>
     </summary>
     <div
-      class="search-modal modal__content gradient"
+      class="search-modal modal__content"
       role="dialog"
       aria-modal="true"
       aria-label="{{ 'general.search.search' | t }}"
