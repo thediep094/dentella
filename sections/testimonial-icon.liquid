@@ -228,10 +228,10 @@
       const containerWidth = container.offsetWidth;
       const wrapperWidth = wrapper.scrollWidth;
 
-      console.log(containerWidth, wrapperWidth, !needsSwiper)
   
       // Kiểm tra nếu nội dung vượt quá container hoặc màn hình nhỏ hơn 768px
       const needsSwiper = wrapperWidth > containerWidth;
+      console.log(containerWidth, wrapperWidth, !needsSwiper)
   
       // Thêm hoặc xóa class để căn giữa khi không cần Swiper
       if (!needsSwiper) {
