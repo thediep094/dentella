@@ -28,21 +28,31 @@
         "share": {
           "type": "share",
           "settings": {
-            "share_label": "Share"
+            "share_label": "Share the article"
           }
         },
         "content": {
           "type": "content",
           "settings": {}
+        },
+        "share_NxNcYq": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share the article"
+          }
         }
       },
       "block_order": [
         "featured_image",
         "title",
         "share",
-        "content"
+        "content",
+        "share_NxNcYq"
       ],
-      "settings": {}
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     },
     "image_banner_LkWi4K": {
       "type": "image-banner",
