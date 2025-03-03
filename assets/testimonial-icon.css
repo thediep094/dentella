@@ -3,6 +3,11 @@
   overflow: hidden;
 }
 
+.testimonial-icon-swiper__wrapper {
+      margin-top: 3rem;
+}
+
+
 .testimonial-icon-item--img {
  width: 3rem;
     height: 3rem;
@@ -31,5 +36,5 @@
 .testimonial-icon-swiper__wrapper-center {
   display: flex;
   justify-content: center;
-    margin-top: 3rem;
+
 }
