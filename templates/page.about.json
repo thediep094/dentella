@@ -9,6 +9,44 @@
  */
 {
   "sections": {
+    "image_with_text_yLJeW7": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Y3X4rY": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Quality",
+            "heading_size": "hxl"
+          }
+        },
+        "text_xdT7Dy": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Dentella has collaborated with top-notch fashion icons to archive global quality and gain customer trust. The company's dedicated team continously works on developing new design sources. Dentella's designs are renowed for their intricate details and exquisite cuts, ensuring that each piece meets the company's own international quality standards.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Y3X4rY",
+        "text_xdT7Dy"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Rounded_Rectangle_-1_ad5ba350-111a-429f-8dfd-e4492440c7dc.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_banner_LkWi4K": {
       "type": "image-banner",
       "blocks": {
@@ -64,6 +102,7 @@
     }
   },
   "order": [
+    "image_with_text_yLJeW7",
     "image_banner_LkWi4K"
   ]
 }
