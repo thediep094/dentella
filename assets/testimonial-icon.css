@@ -1,4 +1,6 @@
 .testimonial-icon-swiper-item {
+  display: flex;
+  flex-direction: column;
   width: fit-content;
 }
 
