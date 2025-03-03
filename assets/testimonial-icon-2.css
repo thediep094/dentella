@@ -1,37 +1,41 @@
-.testimonial-icon-2 .banner__box{
+.testimonial-icon-2 .banner__box {
   max-width: unset !important;
   overflow: hidden;
 }
 
 .testimonial-icon-2-swiper__wrapper {
-      padding-top: 2rem;
+  padding-top: 9rem;
 }
 
-
 .testimonial-icon-2-item--img {
- width: 13rem;
-    object-fit: contain;
+  width: 13rem;
+  object-fit: contain;
   position: relative;
 }
 
-  .testimonial-icon-2-item--img-wrapper {
-    margin: 0 3rem;
-  }
+.testimonial-icon-2-item--img-wrapper {
+  margin: 0 3rem;
+}
 
 .testimonial-icon-2-swiper-item {
   display: flex;
   flex-direction: column;
   width: fit-content;
+  justify-content: flex-end;
+  height: auto;
 }
 
 .testimonial-icon-2-swiper__wrapper-center {
   display: flex;
   justify-content: center;
-
 }
 
 @media screen and (min-width: 768px) {
   .testimonial-icon-2-item--img-wrapper {
-  margin: 0 6rem;
+    margin: 0 9rem;
+  }
+
+  .testimonial-icon-2-item--img {
+    width: 20rem;
   }
 }

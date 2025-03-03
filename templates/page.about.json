@@ -7,52 +7,53 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
-    "testimonial_icon_c47heN": {
-      "type": "testimonial-icon",
+    "image_banner_LhBMw8": {
+      "type": "image-banner",
       "blocks": {
-        "heading_AEbNjt": {
+        "heading_AKGHwV": {
           "type": "heading",
           "settings": {
-            "heading": "High Quality Materials",
-            "heading_size": "h1"
+            "heading": "About Dentella   Luxury Lingerie",
+            "heading_size": "hxl"
           }
         },
-        "icon_aLQV7N": {
-          "type": "icon",
+        "text_p8mT7Y": {
+          "type": "text",
           "settings": {
-            "image": "shopify://shop_images/Group_37838.png",
-            "text": "Lace"
+            "text": "Dentella is a Qatari company that was founded in 2009 by a team of professionals with over 10 years of experience in the women’s sleepwear industry. The company began as a specialized store selling sleepwear made of lace, silk, & cotton. However, with the increasing demand from its customers, Dentella decided to expand its business & open a factory and produce sleepwear on a large scale.",
+            "text_style": "body",
+            "margin_top": 35
           }
         },
-        "icon_6yf9NU": {
-          "type": "icon",
+        "text_zBUANn": {
+          "type": "text",
           "settings": {
-            "image": "shopify://shop_images/Group_37840.png",
-            "text": "Silk"
-          }
-        },
-        "icon_q6MUKc": {
-          "type": "icon",
-          "settings": {
-            "image": "shopify://shop_images/Group_37841.png",
-            "text": "Cotton"
+            "text": "Over the years, the factory has continued to grow and today it produces a wide range of sleepwear under its own brand and other distinguished designers. Dentella’s focus is on meeting the taste of its esteemed customers through the design process, color selection, and texture.",
+            "text_style": "body",
+            "margin_top": 10
           }
         }
       },
       "block_order": [
-        "heading_AEbNjt",
-        "icon_aLQV7N",
-        "icon_6yf9NU",
-        "icon_q6MUKc"
+        "heading_AKGHwV",
+        "text_p8mT7Y",
+        "text_zBUANn"
       ],
       "settings": {
-        "image": "shopify://shop_images/elegant-silk-fabric-decoration.png",
-        "image_overlay_opacity": 30,
+        "page_width": false,
+        "image": "shopify://shop_images/Group_22117.png",
+        "image_overlay_opacity": 0,
         "image_height": "adapt",
+        "desktop_content_position": "middle-right",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
         "color_scheme": "scheme-4",
         "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -70,7 +71,7 @@
         "text_xdT7Dy": {
           "type": "text",
           "settings": {
-            "text": "<p>Dentella has collaborated with top-notch fashion icons to archive global quality and gain customer trust. The company's dedicated team continously works on developing new design sources. Dentella's designs are renowed for their intricate details and exquisite cuts, ensuring that each piece meets the company's own international quality standards.</p>",
+            "text": "<p>Dentella has collaborated with top-notch fashion icons to achieve global quality and gain customer trust. The company’s dedicated team continuously works on developing new design sources. Dentella’s designs are renowned for their intricate details and exquisite cuts, ensuring that each piece meets the company’s own international quality standards.</p>",
             "text_style": "body"
           }
         }
@@ -80,11 +81,11 @@
         "text_xdT7Dy"
       ],
       "settings": {
-        "image": "shopify://shop_images/Rounded_Rectangle_-1_ad5ba350-111a-429f-8dfd-e4492440c7dc.png",
+        "image": "shopify://shop_images/Group_22019.png",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "text_first",
-        "desktop_content_position": "top",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "section_color_scheme": "",
@@ -95,6 +96,54 @@
         "padding_bottom": 100
       }
     },
+    "testimonial_icon_c47heN": {
+      "type": "testimonial-icon",
+      "blocks": {
+        "heading_AEbNjt": {
+          "type": "heading",
+          "settings": {
+            "heading": "High Quality Materials",
+            "heading_size": "h0"
+          }
+        },
+        "icon_aLQV7N": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Path_78165.png",
+            "text": "Lace"
+          }
+        },
+        "icon_6yf9NU": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Path_78162.png",
+            "text": "Silk"
+          }
+        },
+        "icon_q6MUKc": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Path_78163.png",
+            "text": "Cotton"
+          }
+        }
+      },
+      "block_order": [
+        "heading_AEbNjt",
+        "icon_aLQV7N",
+        "icon_6yf9NU",
+        "icon_q6MUKc"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Mask_Group_425.png",
+        "image_overlay_opacity": 30,
+        "image_height": "adapt",
+        "color_scheme": "scheme-4",
+        "image_behavior": "none",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "testimonial_image_D8rUzj": {
       "type": "testimonial-image",
       "blocks": {
@@ -102,7 +151,7 @@
           "type": "heading",
           "settings": {
             "heading": "PRODUCTION ESSENCE",
-            "heading_size": "h1"
+            "heading_size": "h0"
           }
         },
         "text_qr8YDR": {
@@ -116,29 +165,29 @@
         "icon_U6b7md": {
           "type": "icon",
           "settings": {
-            "image": "shopify://shop_images/0D0A6423.png",
-            "text": "Text"
+            "image": "shopify://shop_images/Group_22058.png",
+            "text": "SPECIALIZED MATERIALS"
           }
         },
         "icon_NDXDyD": {
           "type": "icon",
           "settings": {
-            "image": "shopify://shop_images/0D0A6402.png",
-            "text": "Text"
+            "image": "shopify://shop_images/Group_22064.png",
+            "text": "STATE-OF-THE-ART-EQUIPMENT"
           }
         },
         "icon_JhcHjQ": {
           "type": "icon",
           "settings": {
-            "image": "shopify://shop_images/0D0A6423.png",
-            "text": "Text"
+            "image": "shopify://shop_images/Group_22070.png",
+            "text": "MORDERN TECHNOLOGY"
           }
         },
         "icon_qeQtT4": {
           "type": "icon",
           "settings": {
-            "image": "shopify://shop_images/0D0A6398.png",
-            "text": "Text"
+            "image": "shopify://shop_images/Group_22082.png",
+            "text": "QUALITY CONTROLS PROCEDURE"
           }
         }
       },
@@ -163,42 +212,42 @@
           "type": "heading",
           "settings": {
             "heading": "Successful Partnerships",
-            "heading_size": "h1"
+            "heading_size": "h0"
           }
         },
         "text_hJWcwt": {
           "type": "text",
           "settings": {
-            "text": "Dentella's luxury collections are available at Blue salon's branches",
-            "text_style": "body",
-            "margin_top": 10
+            "text": "Dentella’s luxury collections are available at Blue salon’s branches",
+            "text_style": "subtitle",
+            "margin_top": 8
           }
         },
         "icon_RptyaH": {
           "type": "icon",
           "settings": {
-            "image": "shopify://shop_images/Group_520.png",
+            "image": "shopify://shop_images/galeries_lafayette-logo_brandlogos.net_6mhkn.png",
             "text": ""
           }
         },
         "icon_nJ6P4E": {
           "type": "icon",
           "settings": {
-            "image": "shopify://shop_images/Group_520.png",
-            "text": ""
-          }
-        },
-        "icon_3w8ywG": {
-          "type": "icon",
-          "settings": {
-            "image": "shopify://shop_images/Group_520.png",
+            "image": "shopify://shop_images/yPhM3c_tif.png",
             "text": ""
           }
         },
         "icon_mFzU8f": {
           "type": "icon",
           "settings": {
-            "image": "shopify://shop_images/Group_520.png",
+            "image": "shopify://shop_images/BlueSalon.png",
+            "text": ""
+          }
+        },
+        "icon_3w8ywG": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/6914a614428885.59b025df8682e.png",
             "text": ""
           }
         }
@@ -208,13 +257,13 @@
         "text_hJWcwt",
         "icon_RptyaH",
         "icon_nJ6P4E",
-        "icon_3w8ywG",
-        "icon_mFzU8f"
+        "icon_mFzU8f",
+        "icon_3w8ywG"
       ],
       "settings": {
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 100
       }
     },
     "image_banner_LkWi4K": {
@@ -267,13 +316,14 @@
         "stack_images_on_mobile": false,
         "show_text_below": false,
         "padding_top": 100,
-        "padding_bottom": 36
+        "padding_bottom": 48
       }
     }
   },
   "order": [
-    "testimonial_icon_c47heN",
+    "image_banner_LhBMw8",
     "image_with_text_yLJeW7",
+    "testimonial_icon_c47heN",
     "testimonial_image_D8rUzj",
     "testimonial_icon_2_QyMRB6",
     "image_banner_LkWi4K"
