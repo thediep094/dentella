@@ -231,14 +231,14 @@
   
       // Thêm hoặc xóa class để căn giữa khi không cần Swiper
       if (!needsSwiper) {
-        swiperWrapper.classList.add('testimonial-icon-swiper__wrapper');
+        swiperWrapper.classList.add('testimonial-icon-swiper__wrapper-center');
         // Hủy Swiper nếu đã tồn tại
         if (swiperInstance) {
           swiperInstance.destroy();
           swiperInstance = null;
         }
       } else {
-        swiperWrapper.classList.remove('testimonial-icon-swiper__wrapper');
+        swiperWrapper.classList.remove('testimonial-icon-swiper__wrapper-center');
         // Chỉ khởi tạo Swiper nếu chưa có
         if (!swiperInstance) {
           swiperInstance = new Swiper('#swiper-container--{{ section.id }}', {
