@@ -9,13 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
     "image_banner_LkWi4K": {
       "type": "image-banner",
       "blocks": {
@@ -71,7 +64,6 @@
     }
   },
   "order": [
-    "main",
     "image_banner_LkWi4K"
   ]
 }
