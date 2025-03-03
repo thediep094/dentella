@@ -13,7 +13,7 @@
 .testimonial-icon-item--img-wrapper {
   width: 7rem;
     height: 7rem;
-  margin-top: 3rem;
+
    display: flex;
   justify-content: center;
   align-items: center;
@@ -31,4 +31,5 @@
 .testimonial-icon-swiper__wrapper-center {
   display: flex;
   justify-content: center;
+    margin-top: 3rem;
 }
