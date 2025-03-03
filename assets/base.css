@@ -4173,3 +4173,7 @@ details-disclosure > details {
     transform: translateY(0);
   }
 }
+
+.feature-blog .title-wrapper--no-top-margin {
+  text-align: center;
+}
