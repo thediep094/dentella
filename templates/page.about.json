@@ -33,7 +33,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Rounded_Rectangle_-1_ad5ba350-111a-429f-8dfd-e4492440c7dc.png",
-        "height": "adapt",
+        "height": "large",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "top",
