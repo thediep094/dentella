@@ -199,7 +199,7 @@
         {% for block in section.blocks %}
           {% case block.type %}
             {% when 'icon' %}
-               <div class="swiper-slide testimonial-icon-swiper-item button button--secondary" id="testimonial-icon-swiper--">
+               <div class="swiper-slide testimonial-icon-swiper-item" id="testimonial-icon-swiper--">
                  <img src="{{ block.settings.image | image_url: width: 100  }}" width="auto" height="auto">
                 {{ block.settings.text }}
               </div>
