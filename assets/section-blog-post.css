@@ -173,13 +173,7 @@
 .article-template__back:last-child {
   margin-bottom: 3.2rem;
 }
-
-.article-wrapper {
-    display: grid;
-    grid-template-columns: minmax(0, 300px) 1fr;
-    gap: 20px;
-}
-
 .article-image {
   height: fit-content;
+  float: left;
 }
