@@ -1,7 +1,7 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
 <article class="article-template">
-  <div class="article-wrapper">
+  <div class="article-wrapper page-width">
     <div class="article-image">
     {% for block in section.blocks %}
       {% case block.type %}
@@ -50,7 +50,7 @@
         </div>
       {%- when 'title' -%}
         <header
-          class="page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+          class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
           {{ block.shopify_attributes }}
         >
           <h1
@@ -72,7 +72,7 @@
 
       {%- when 'content' -%}
         <div
-          class="article-template__content page-width  rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="article-template__content  rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {{ block.shopify_attributes }}
         >
           {{ article.content }}
@@ -80,7 +80,7 @@
 
       {%- when 'share' -%}
         <div
-          class="article-template__social-sharing page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="article-template__social-sharing {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {{ block.shopify_attributes }}
         >
           {% assign share_url = request.origin | append: article.url %}
