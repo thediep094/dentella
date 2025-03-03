@@ -11,6 +11,18 @@
   "sections": {
     "testimonial_icon_c47heN": {
       "type": "testimonial-icon",
+      "blocks": {
+        "heading_AEbNjt": {
+          "type": "heading",
+          "settings": {
+            "heading": "High Quality Materials",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_AEbNjt"
+      ],
       "settings": {
         "image": "shopify://shop_images/elegant-silk-fabric-decoration.png",
         "image_overlay_opacity": 30,
