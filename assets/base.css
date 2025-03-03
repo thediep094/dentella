@@ -3984,7 +3984,7 @@ details-disclosure > details {
   align-items: center;
 }
 
-.size-table th::after {
+.size-table .size-table__head::after {
   content: attr(data-symbol);
   position: absolute;
   font-size: 1.6rem;
