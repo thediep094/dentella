@@ -95,6 +95,67 @@
         "padding_bottom": 100
       }
     },
+    "testimonial_icon_2_QyMRB6": {
+      "type": "testimonial-icon-2",
+      "blocks": {
+        "heading_qeAiiV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Successful Partnerships",
+            "heading_size": "h1"
+          }
+        },
+        "text_hJWcwt": {
+          "type": "text",
+          "settings": {
+            "text": "Dentella's luxury collections are available at Blue salon's branches",
+            "text_style": "body",
+            "margin_top": 10
+          }
+        },
+        "icon_RptyaH": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Group_520.png",
+            "text": ""
+          }
+        },
+        "icon_nJ6P4E": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Group_520.png",
+            "text": ""
+          }
+        },
+        "icon_3w8ywG": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Group_520.png",
+            "text": ""
+          }
+        },
+        "icon_mFzU8f": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Group_520.png",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_qeAiiV",
+        "text_hJWcwt",
+        "icon_RptyaH",
+        "icon_nJ6P4E",
+        "icon_3w8ywG",
+        "icon_mFzU8f"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_banner_LkWi4K": {
       "type": "image-banner",
       "blocks": {
@@ -152,6 +213,7 @@
   "order": [
     "testimonial_icon_c47heN",
     "image_with_text_yLJeW7",
+    "testimonial_icon_2_QyMRB6",
     "image_banner_LkWi4K"
   ]
 }
