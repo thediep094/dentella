@@ -183,14 +183,3 @@
 .article-image {
   height: fit-content;
 }
-
-/* Khi content dài hơn, caption sẽ mở rộng sang trái */
-@media (min-height: 300px) { /* Đảm bảo tính tương thích */
-  
-  .article-content p {
-    position: absolute;
-    left: 0;
-    width: calc(100% + 20px); /* 100% + gap */
-    transform: translateX(-20px); /* Bù lại gap */
-  }
-}
