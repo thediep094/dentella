@@ -228,7 +228,7 @@
       const containerWidth = container.offsetWidth;
       const wrapperWidth = wrapper.scrollWidth;
 
-      console.log(containerWidth, wrapperWidth)
+      console.log(containerWidth, wrapperWidth, !needsSwiper)
   
       // Kiểm tra nếu nội dung vượt quá container hoặc màn hình nhỏ hơn 768px
       const needsSwiper = wrapperWidth > containerWidth;
@@ -242,6 +242,7 @@
           swiperInstance = null;
         }
       } else {
+        console.log("abc")
         swiperWrapper.classList.remove('testimonial-icon-swiper__wrapper-center');
         // Chỉ khởi tạo Swiper nếu chưa có
         if (!swiperInstance) {
