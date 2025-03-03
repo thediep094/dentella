@@ -18,10 +18,34 @@
             "heading": "High Quality Materials",
             "heading_size": "h1"
           }
+        },
+        "icon_aLQV7N": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Group_37838.png",
+            "text": "Lace"
+          }
+        },
+        "icon_6yf9NU": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Group_37840.png",
+            "text": "Silk"
+          }
+        },
+        "icon_q6MUKc": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Group_37841.png",
+            "text": "Cotton"
+          }
         }
       },
       "block_order": [
-        "heading_AEbNjt"
+        "heading_AEbNjt",
+        "icon_aLQV7N",
+        "icon_6yf9NU",
+        "icon_q6MUKc"
       ],
       "settings": {
         "image": "shopify://shop_images/elegant-silk-fabric-decoration.png",
