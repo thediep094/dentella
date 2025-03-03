@@ -6,15 +6,17 @@
 }
 
 .testimonial-icon-item--img-wrapper {
-  w
-}
-
-.testimonial-icon-swiper-item {
   width: 7rem;
     height: 7rem;
    display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.testimonial-icon-swiper-item {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
 }
 
 .testimonial-icon-swiper__wrapper-center {
