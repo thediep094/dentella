@@ -12,6 +12,7 @@
  width: 13rem;
     object-fit: contain;
   position: relative;
+  clip-path: path('M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z');
 }
 
   .testimonial-image-item--img-wrapper {
