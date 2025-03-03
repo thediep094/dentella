@@ -39,55 +39,13 @@
             "image": "shopify://shop_images/Group_37841.png",
             "text": "Cotton"
           }
-        },
-        "icon_Qq8kWC": {
-          "type": "icon",
-          "settings": {
-            "text": "Text"
-          }
-        },
-        "icon_TNyVcV": {
-          "type": "icon",
-          "settings": {
-            "text": "Text"
-          }
-        },
-        "icon_NrFKgX": {
-          "type": "icon",
-          "settings": {
-            "text": "Text"
-          }
-        },
-        "icon_TEbqEh": {
-          "type": "icon",
-          "settings": {
-            "text": "Text"
-          }
-        },
-        "icon_HXUrYG": {
-          "type": "icon",
-          "settings": {
-            "text": "Text"
-          }
-        },
-        "icon_P6ntMC": {
-          "type": "icon",
-          "settings": {
-            "text": "Text"
-          }
         }
       },
       "block_order": [
         "heading_AEbNjt",
         "icon_aLQV7N",
         "icon_6yf9NU",
-        "icon_q6MUKc",
-        "icon_Qq8kWC",
-        "icon_TNyVcV",
-        "icon_NrFKgX",
-        "icon_TEbqEh",
-        "icon_HXUrYG",
-        "icon_P6ntMC"
+        "icon_q6MUKc"
       ],
       "settings": {
         "image": "shopify://shop_images/elegant-silk-fabric-decoration.png",
