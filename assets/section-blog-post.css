@@ -173,9 +173,14 @@
 .article-template__back:last-child {
   margin-bottom: 3.2rem;
 }
-.article-image {
+
+@media screen and (min-width: 900px) {
+  .article-image {
   width: 500px;
   height: fit-content;
   float: left;
   margin-right: 30px;
 }
+
+}
+
