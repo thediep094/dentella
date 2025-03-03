@@ -55,7 +55,7 @@
 
 .article-template header {
   margin-top: 4.4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   line-height: calc(0.8 / var(--font-body-scale));
 }
 
@@ -93,7 +93,7 @@
 }
 
 .article-template__social-sharing {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 .article-template__social-sharing + header,
