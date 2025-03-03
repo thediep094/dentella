@@ -962,6 +962,12 @@ summary::-webkit-details-marker {
   color: rgba(var(--color-foreground), 0.7);
 }
 
+@media screen and (min-width: 750px) {
+  .subtitle {
+    font-size: 2.4rem;
+  }
+}
+
 .subtitle--small {
   font-size: 1.4rem;
   letter-spacing: 0.1rem;

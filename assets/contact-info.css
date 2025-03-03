@@ -1,0 +1,32 @@
+.contact-info__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 2.1rem;
+  column-gap: 4rem;
+  max-width: 70rem;
+  margin-top: 6rem;
+}
+
+.contact-info__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.5rem;
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+
+@media screen and (min-width: 750px) {
+  .contact-info__wrapper {
+    row-gap: 2.1rem;
+    column-gap: 8rem;
+    margin-top: 9.8rem;
+  }
+
+  .contact-info__item {
+    font-size: 2.4rem;
+  }
+}

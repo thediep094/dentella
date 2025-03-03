@@ -1,7 +1,17 @@
-{
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36
@@ -9,17 +19,129 @@
     },
     "form": {
       "type": "contact-form",
+      "blocks": {
+        "contact_form_NqWWjx": {
+          "type": "contact_form",
+          "settings": {}
+        },
+        "image_FbBbiP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_22048.png"
+          }
+        }
+      },
+      "block_order": [
+        "contact_form_NqWWjx",
+        "image_FbBbiP"
+      ],
       "settings": {
-        "heading": "",
-        "heading_size": "h1",
+        "image": "shopify://shop_images/Group_22117_5ba25f3d-4f29-4e8c-bd20-8ed67e95dc26.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
         "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "image_behavior": "none",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "contact_info_wQUkYJ": {
+      "type": "contact-info",
+      "blocks": {
+        "heading_eECzDF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Contact Us",
+            "heading_size": "h0"
+          }
+        },
+        "text_LRUXjU": {
+          "type": "text",
+          "settings": {
+            "text": "We are always ready to help you and answer your questions",
+            "text_style": "subtitle",
+            "margin_top": 10
+          }
+        },
+        "info_JiWEYT": {
+          "type": "info",
+          "settings": {
+            "what_app": "+974 3368 7030",
+            "email": "info@dentella.qa",
+            "number": "+974 3368 7030",
+            "instagram": "@dentellaqatar"
+          }
+        }
+      },
+      "block_order": [
+        "heading_eECzDF",
+        "text_LRUXjU",
+        "info_JiWEYT"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "image_banner_LkWi4K": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_FHYMTJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "THE VIP BOX",
+            "heading_size": "h1"
+          }
+        },
+        "text_3LFHrK": {
+          "type": "text",
+          "settings": {
+            "text": "The Ultimate Luxury Experience",
+            "text_style": "body",
+            "margin_top": 0
+          }
+        },
+        "buttons_kJpGk4": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Contact Us",
+            "button_link_1": "shopify://pages/contact",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "margin_top": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_FHYMTJ",
+        "text_3LFHrK",
+        "buttons_kJpGk4"
+      ],
+      "settings": {
+        "page_width": false,
+        "image": "shopify://shop_images/Group_22121_6e3ca388-ce31-44d2-94e6-660158555483.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "top-right",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "padding_top": 100,
+        "padding_bottom": 48
       }
     }
   },
   "order": [
     "main",
-    "form"
+    "form",
+    "contact_info_wQUkYJ",
+    "image_banner_LkWi4K"
   ]
 }
