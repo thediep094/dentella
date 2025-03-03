@@ -1,3 +1,8 @@
 .testimonial-icon-swiper-item {
   width: fit-content;
 }
+
+.testimonial-icon-swiper__wrapper-center {
+  display: flex;
+  justify-content: center;
+}
