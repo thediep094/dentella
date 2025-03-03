@@ -193,6 +193,20 @@
             </div>
         {%- endcase -%}
       {%- endfor -%}
+
+      <div class="testimonial-icon-swiper"  id="swiper-container--{{ section.id }}">
+        <div class="swiper-wrapper">  
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'icon' %}
+               <div class="swiper-slide testimonial-icon-swiper-item button button--secondary">
+                {{ block.settings.text }}
+              </div>
+              
+          {% endcase %}
+        {% endfor %}
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -417,7 +431,24 @@
           "label": "Margin top"
         }
       ]
-    }
+    },
+      {
+        "type": "icon",
+        "name":"Icon",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Icon"
+          },
+          {
+          "type": "text",
+          "id": "text",
+          "default": "Text",
+          "label": "Text",
+        },
+        ]
+      }
     
     ],
     "presets": [
