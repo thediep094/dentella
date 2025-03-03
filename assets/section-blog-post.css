@@ -173,3 +173,24 @@
 .article-template__back:last-child {
   margin-bottom: 3.2rem;
 }
+
+.article-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 300px) 1fr;
+    gap: 20px;
+}
+
+.article-image {
+  height: fit-content;
+}
+
+/* Khi content dài hơn, caption sẽ mở rộng sang trái */
+@media (min-height: 0) { /* Đảm bảo tính tương thích */
+  
+  .article-image {
+    position: absolute;
+    left: 0;
+    width: calc(100% + 20px); /* 100% + gap */
+    transform: translateX(-20px); /* Bù lại gap */
+  }
+}
