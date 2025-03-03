@@ -5,19 +5,16 @@
   position: relative;
 }
 
-.testimonial-icon-item--img:after {
-  content: '',
-  left: -1rem;
-  right: -1rem;
-  bottom: -1rem;
-  top: -1rem;
-  border: 1px solid rgb(var(--color-foreground));
+.testimonial-icon-item--img-wrapper {
+  w
 }
 
 .testimonial-icon-swiper-item {
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
+  width: 7rem;
+    height: 7rem;
+   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .testimonial-icon-swiper__wrapper-center {
