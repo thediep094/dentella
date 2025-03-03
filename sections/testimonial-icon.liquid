@@ -229,10 +229,16 @@
       const wrapperWidth = wrapper.scrollWidth;
 
   
-      // Kiểm tra nếu nội dung vượt quá container hoặc màn hình nhỏ hơn 768px
-      const needsSwiper = wrapperWidth > containerWidth;
-      console.log(containerWidth, wrapperWidth, !needsSwiper)
-  
+     // Calculate total width of all swiper slides
+        const slides = wrapper.querySelectorAll('.swiper-slide');
+        let totalItemsWidth = 0;
+        slides.forEach(slide => {
+            totalItemsWidth += slide.offsetWidth;
+        });
+
+        // Check if total items width exceeds container or screen is less than 768px
+        const needsSwiper = totalItemsWidth > containerWidth;
+      
       // Thêm hoặc xóa class để căn giữa khi không cần Swiper
       if (!needsSwiper) {
         swiperWrapper.classList.add('testimonial-icon-swiper__wrapper-center');
