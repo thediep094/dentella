@@ -185,7 +185,7 @@
 }
 
 /* Khi content dài hơn, caption sẽ mở rộng sang trái */
-@media (min-height: 0) { /* Đảm bảo tính tương thích */
+@media (min-height: 300px) { /* Đảm bảo tính tương thích */
   
   .article-image {
     position: absolute;
