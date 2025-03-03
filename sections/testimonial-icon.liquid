@@ -238,7 +238,6 @@
 
         // Check if total items width exceeds container or screen is less than 768px
         const needsSwiper = totalItemsWidth > containerWidth;
-        console.log(totalItemsWidth, containerWidth)
       // Thêm hoặc xóa class để căn giữa khi không cần Swiper
       if (!needsSwiper) {
         swiperWrapper.classList.add('testimonial-icon-swiper__wrapper-center');
@@ -248,7 +247,6 @@
           swiperInstance = null;
         }
       } else {
-        console.log("abc")
         swiperWrapper.classList.remove('testimonial-icon-swiper__wrapper-center');
         // Chỉ khởi tạo Swiper nếu chưa có
         if (!swiperInstance) {
