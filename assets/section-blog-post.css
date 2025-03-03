@@ -187,7 +187,7 @@
 /* Khi content dài hơn, caption sẽ mở rộng sang trái */
 @media (min-height: 300px) { /* Đảm bảo tính tương thích */
   
-  .article-image p {
+  .article-content p {
     position: absolute;
     left: 0;
     width: calc(100% + 20px); /* 100% + gap */
