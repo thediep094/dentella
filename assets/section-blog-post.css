@@ -185,10 +185,10 @@
 
 @media screen and (min-width: 900px) {
   .article-image {
-  width: 500px;
+  width: 50rem;
   height: fit-content;
   float: left;
-  margin-right: 30px;
+  margin-right: 3rem;
 }
 
 }
