@@ -95,6 +95,67 @@
         "padding_bottom": 100
       }
     },
+    "testimonial_image_D8rUzj": {
+      "type": "testimonial-image",
+      "blocks": {
+        "heading_wb4Thq": {
+          "type": "heading",
+          "settings": {
+            "heading": "PRODUCTION ESSENCE",
+            "heading_size": "h1"
+          }
+        },
+        "text_qr8YDR": {
+          "type": "text",
+          "settings": {
+            "text": "METTING THE NEEDS OF RETAIL TRADERS WITH",
+            "text_style": "body",
+            "margin_top": 10
+          }
+        },
+        "icon_U6b7md": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/0D0A6423.png",
+            "text": "Text"
+          }
+        },
+        "icon_NDXDyD": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/0D0A6402.png",
+            "text": "Text"
+          }
+        },
+        "icon_JhcHjQ": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/0D0A6423.png",
+            "text": "Text"
+          }
+        },
+        "icon_qeQtT4": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/0D0A6398.png",
+            "text": "Text"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wb4Thq",
+        "text_qr8YDR",
+        "icon_U6b7md",
+        "icon_NDXDyD",
+        "icon_JhcHjQ",
+        "icon_qeQtT4"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "testimonial_icon_2_QyMRB6": {
       "type": "testimonial-icon-2",
       "blocks": {
@@ -213,6 +274,7 @@
   "order": [
     "testimonial_icon_c47heN",
     "image_with_text_yLJeW7",
+    "testimonial_image_D8rUzj",
     "testimonial_icon_2_QyMRB6",
     "image_banner_LkWi4K"
   ]
