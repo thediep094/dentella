@@ -200,6 +200,7 @@
           {% case block.type %}
             {% when 'icon' %}
                <div class="swiper-slide testimonial-icon-swiper-item button button--secondary">
+                 <img src="{{ block.settings.icon | image_url: width: 100  }}" width="auto" height="auto">
                 {{ block.settings.text }}
               </div>
               
