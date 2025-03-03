@@ -9,6 +9,18 @@
  */
 {
   "sections": {
+    "testimonial_icon_c47heN": {
+      "type": "testimonial-icon",
+      "settings": {
+        "image": "shopify://shop_images/elegant-silk-fabric-decoration.png",
+        "image_overlay_opacity": 30,
+        "image_height": "adapt",
+        "color_scheme": "scheme-4",
+        "image_behavior": "none",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_yLJeW7": {
       "type": "image-with-text",
       "blocks": {
@@ -102,6 +114,7 @@
     }
   },
   "order": [
+    "testimonial_icon_c47heN",
     "image_with_text_yLJeW7",
     "image_banner_LkWi4K"
   ]
