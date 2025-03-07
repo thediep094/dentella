@@ -14,9 +14,7 @@
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
@@ -113,7 +111,7 @@
         --font-body-weight: {{ settings.type_body_font.weight }};
         --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
 
-        --font-heading-family: "Outfit", sans-serif;
+        --font-heading-family: "Outfit Bold", sans-serif;
         --font-heading-style: {{ settings.type_header_font.style }};
         --font-heading-weight: {{ settings.type_header_font.weight }};
 
@@ -323,15 +321,15 @@
     {% if template == 'index' %}
       {% render 'scroll-down-button' %}
     {% endif %}
-      <!-- Modal Structure -->
-      <div id="sizeModal" class="modal">
-        <div class="modal-content">
-          <span class="close-btn">&times;</span>
-          <div id="modalBody">
-            <!-- Dynamic content will be injected here -->
-          </div>
+    <!-- Modal Structure -->
+    <div id="sizeModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div id="modalBody">
+          <!-- Dynamic content will be injected here -->
         </div>
       </div>
+    </div>
     {% sections 'footer-group' %}
 
     <ul hidden>
