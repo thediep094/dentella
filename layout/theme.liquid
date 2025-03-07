@@ -382,6 +382,44 @@
       };
     </script>
 
+    <!-- Swiper.js Initialization -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function initSwipers() {
+          let isMobile = window.innerWidth < 768;
+
+          const thumbnailSwiper = new Swiper(".thumbnail-swiper", {
+            direction: isMobile ? "horizontal" : "vertical", // Switch direction based on screen size
+            slidesPerView: "auto",
+            spaceBetween: 14,
+            watchSlidesProgress: true,
+          });
+
+          const mainSwiper = new Swiper(".main-swiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            thumbs: {
+              swiper: thumbnailSwiper,
+            },
+          });
+
+          return { thumbnailSwiper, mainSwiper };
+        }
+
+        let swipers = initSwipers();
+
+        // Reinitialize Swipers on Resize
+        window.addEventListener("resize", function () {
+          if ((window.innerWidth < 768 && swipers.thumbnailSwiper.params.direction !== "horizontal") ||
+              (window.innerWidth >= 768 && swipers.thumbnailSwiper.params.direction !== "vertical")) {
+            swipers.thumbnailSwiper.destroy(true, true);
+            swipers.mainSwiper.destroy(true, true);
+            swipers = initSwipers();
+          }
+        });
+      });
+    </script>
+
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
