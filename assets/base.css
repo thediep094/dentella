@@ -2830,6 +2830,10 @@ details[open] .modal-overlay::after {
   background-color: rgba(var(--color-background), 0.7);
   border-radius: 10px;
 }
+.search-modal__content--white {
+  background-color: rgba(var(--color-background), 1);
+  border: 1px solid rgb(var(--color-foreground));
+}
 
 
 .search__input.field__input {
