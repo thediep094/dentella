@@ -1,5 +1,4 @@
 {% comment %}
-
   Accepts:
   - product: {Object} product object.
   - block: {Object} block object.
@@ -12,11 +11,9 @@
   %}
 {% endcomment %}
 
-{{ 'component-size-guide.css' |  asset_url |  stylesheet_tag }}
+{{ 'component-size-guide.css' | asset_url | stylesheet_tag }}
 
-<div class="size-guide button button--secondary"  id="openModal" >
-    Size Guide
-</div>
+<div class="size-guide button button--secondary" id="openModal">Size Guide</div>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -27,15 +24,14 @@
   
 
 
- const sizeXS = {{ product.metafields.custom.size_xs }}
- const sizeS = {{ product.metafields.custom.size_s }}
- const sizeM = {{ product.metafields.custom.size_m }}
- const sizeL = {{ product.metafields.custom.size_l }}
+const sizeXS = {{ product.metafields.custom.size_xs | default: '[]' }}
+const sizeS = {{ product.metafields.custom.size_s | default: '[]' }}
+const sizeM = {{ product.metafields.custom.size_m | default: '[]' }}
+const sizeL = {{ product.metafields.custom.size_l | default: '[]' }}
 
-
- const sizeUK = {{ product.metafields.custom.size_uk }}
- const sizeEU = {{ product.metafields.custom.size_eu }}
- const sizeUS = {{ product.metafields.custom.size_us }}
+const sizeUK = {{ product.metafields.custom.size_uk | default: '[]' }}
+const sizeEU = {{ product.metafields.custom.size_eu | default: '[]' }}
+const sizeUS = {{ product.metafields.custom.size_us | default: '[]' }}
 
   // Example: Size Guide Data
   const sizeGuideHTML = `
@@ -135,5 +131,4 @@
     }
   });
 });
-
 </script>
