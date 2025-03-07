@@ -147,6 +147,11 @@
         "type": "shopify://apps/essential-preorder/blocks/app-embed/bb7e7a06-2a82-4e7d-8984-c3918deb1c2a",
         "disabled": true,
         "settings": {}
+      },
+      "11674196072004505311": {
+        "type": "shopify://apps/myshop-whatsapp-button/blocks/widget/a5ad5d7c-50b7-4654-8fba-63fd50479f7d",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
